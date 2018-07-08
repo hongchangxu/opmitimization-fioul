@@ -294,18 +294,21 @@ def etat_init():
     try:
         cur = conn.cursor()
         query = 'SELECT * FROM etat where date = %s;'
-        cur.execute(query, (runtime))
-        conn.commit()
-    except Exception as e:
-        logger.error(e)
-        logger.error('connect to the database failed')
-    try:
-        logger.info('try to insert a new etat into the datebase')
-        cur = conn.cursor()
-        query = 'INSERT INTO etat (etat_code, date) VALUES (%s,%s);'
-        cur.execute(query, (0, runtime))
-        conn.commit()
-        logger.info('etat init succeed')
+        cur.execute(query, (runtime,))   # sometimes, a , can change people's life
+        etatTemp = cur.fetchall()
+        if len(etatTemp):
+            etat_set(0)
+        else:
+            try:
+                logger.info('try to insert a new etat into the datebase')
+                cur = conn.cursor()
+                query = 'INSERT INTO etat (etat_code, date) VALUES (%s,%s);'
+                cur.execute(query, (0, runtime))
+                conn.commit()
+                logger.info('etat init succeed')
+            except Exception as e:
+                logger.error(e)
+                logger.error('connect to the database failed')
     except Exception as e:
         logger.error(e)
         logger.error("can't insert a new etat into the datebase")
@@ -340,15 +343,8 @@ def etat_set(etat_code):
         cur = conn.cursor()
         query = 'UPDATE etat SET etat_code = %s WHERE date = %s;'
         cur.execute(query, (etat_code, runtime))
-        etat_temp = cur.fetchall()
-        if len(etat_temp):
-            conn.close()
-            etat_set(0)
-        else:
-            query = 'INSERT INTO etat (etat_code, date) VALUES (%s,%s);'
-            cur.execute(query, (0, runtime))
-            conn.commit()
-            logger.info('etat init succeed')
+        conn.commit()
+        logger.info('etat set succeed')
     except Exception as e:
         logger.error(e)
         logger.error("can't update the etat on the database")
@@ -1047,7 +1043,7 @@ def recuperation_reduc_essayer(website, codepostals):
 
     except_time = 0
     quantite = 1000
-    email = 'toto@gmail.com'
+    email = 'clement@gmail.com'
     bon_cps = []
     cps_prix_reel = []
     cps_prix_original = []
@@ -1872,6 +1868,45 @@ def recuperation_carrefour(site, codepostals):
         recuperation_carrefour_essayer(site, code_postals_essaye)
     recuperation_carrefour_falloir(site, code_postals_obligatoire)
 
+def getCodepostalsLost(site, codepostals):
+    try:
+        conn = psycopg2.connect(database=DATA_BASE_NAME, user=DATA_BASE_USER, password=DATA_BASE_PASSWORD,
+                                host=DATA_BASE_HOST_ADDRESS, port=DATA_BASE_PORT)
+    except Exception as e:
+        logger.error(e)
+        logger.error("connect to the database failed")
+        exit(0)
+    runtime = time.strftime("%Y-%m-%d", time.localtime())
+    codepostalsTemp = []
+    try:
+        cur = conn.cursor()
+        query = 'SELECT code_postal FROM prix WHERE date = %s AND site = %s ;'
+        cur.execute(query, (runtime, site[0]))
+        prix_recupere = cur.fetchall()
+        conn.close()
+        signalTemp = False
+        for i in codepostals:
+            signalTemp = False
+            for j in prix_recupere:
+                if j[0] == i[0]:
+                    signalTemp = True
+                    break
+            if signalTemp:
+                pass
+            else:
+                codepostalsTemp.append(i)
+
+
+
+
+        return codepostalsTemp
+
+    except Exception as e:
+        logger.error(e)
+        logger.error("get the stat failed")
+        conn.close()
+
+
 """
 
   recuperation_market - a function which is used to collect the price of one site
@@ -1888,11 +1923,14 @@ def recuperation_carrefour(site, codepostals):
 """
 def recuperation(site, codepostals):
     if site[1] == 'https://www.fioulmarket.fr/':
-        recuperation_market(site, codepostals)
+        codepostals_market = getCodepostalsLost(site, codepostals)
+        recuperation_market(site, codepostals_market)
     elif site[1] == 'https://www.fioulreduc.com/':
-        recuperation_reduc(site, codepostals)
+        codepostals_reduc = getCodepostalsLost(site, codepostals)
+        recuperation_reduc(site, codepostals_reduc)
     elif site[1] == 'http://www.carrefour.fr/services/fioul-domestique/':
-        recuperation_carrefour(site, codepostals)
+        codepostals_carrefour = getCodepostalsLost(site, codepostals)
+        recuperation_carrefour(site, codepostals_carrefour)
     else:
         logger.warning("There are no function to treat this site:" + site[1])
 
@@ -1905,7 +1943,6 @@ if __name__=='__main__':
     init_program()
     begin = time.clock()
     etat_init()
-
     try:
         logger.info('try to connect to the database in order to get all the code postals')
         conn = psycopg2.connect(database=DATA_BASE_NAME, user=DATA_BASE_USER, password=DATA_BASE_PASSWORD,
