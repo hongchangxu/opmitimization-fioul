@@ -1,0 +1,1860 @@
+2018-07-10 17:04:26,631 :: INFO :: begin to init the program with configuration file
+2018-07-10 17:04:26,708 :: INFO :: get the email configuration succeed
+2018-07-10 17:04:26,709 :: INFO :: etat init
+2018-07-10 17:04:26,783 :: INFO :: try to insert a new etat into the datebase
+2018-07-10 17:04:26,963 :: INFO :: etat init succeed
+2018-07-10 17:04:26,963 :: INFO :: try to connect to the database in order to get all the code postals
+2018-07-10 17:04:26,966 :: INFO :: connection succeed
+2018-07-10 17:04:26,966 :: INFO :: try to select code postals and sites from database
+2018-07-10 17:04:27,015 :: INFO :: selection of code postal and sites from database succeed
+2018-07-10 17:04:27,015 :: INFO :: begin to lance the thread
+2018-07-10 17:04:27,195 :: INFO :: Begin to collect the price from http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:04:27,195 :: INFO :: Begin to collect the price from https://www.fioulreduc.com/
+2018-07-10 17:04:27,195 :: INFO :: site:http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal obligatoire:[(4, '76290'), (6, '33150'), (7, '33270'), (9, '24000'), (10, '62200'), (11, '59140'), (12, '62500'), (13, '69300'), (14, '69130'), (15, '71000'), (16, '69230'), (21, '91220'), (22, '95000'), (23, '92260'), (24, '78200'), (25, '78310'), (26, '77000'), (27, '91230'), (28, '93330'), (29, '95520'), (30, '78370'), (31, '95230'), (32, '95150'), (33, '77100'), (34, '78140'), (35, '91140'), (36, '13400'), (39, '84300'), (40, '84130'), (41, '84000'), (42, '72000'), (43, '74000'), (45, '37170'), (46, '37540'), (47, '37000'), (48, '62000'), (49, '62400'), (50, '59500'), (51, '59320'), (52, '59220'), (53, '59115'), (54, '62950'), (55, '59223'), (56, '59650'), (58, '59300'), (59, '59400'), (61, '59720'), (63, '02300'), (62, '02100'), (1, '06400'), (2, '26000'), (18, '41000'), (19, '45160'), (20, '45140'), (57, '59000'), (3, '76000'), (17, '69330')] 
+ code postal essay:[(5, '16000'), (8, '16100'), (37, '76200'), (38, '80350'), (44, '81100'), (60, '02500'), (64, '62100\r\n')]
+2018-07-10 17:04:27,195 :: INFO :: site:https://www.fioulreduc.com/ 
+ code postal obligatoire:[(4, '76290'), (5, '16000'), (6, '33150'), (7, '33270'), (8, '16100'), (9, '24000'), (10, '62200'), (11, '59140'), (12, '62500'), (13, '69300'), (14, '69130'), (15, '71000'), (16, '69230'), (21, '91220'), (22, '95000'), (23, '92260'), (24, '78200'), (25, '78310'), (26, '77000'), (27, '91230'), (28, '93330'), (29, '95520'), (30, '78370'), (31, '95230'), (32, '95150'), (33, '77100'), (34, '78140'), (35, '91140'), (36, '13400'), (37, '76200'), (38, '80350'), (39, '84300'), (40, '84130'), (41, '84000'), (42, '72000'), (43, '74000'), (44, '81100'), (45, '37170'), (46, '37540'), (47, '37000'), (48, '62000'), (49, '62400'), (50, '59500'), (51, '59320'), (52, '59220'), (53, '59115'), (54, '62950'), (55, '59223'), (56, '59650'), (58, '59300'), (59, '59400'), (61, '59720'), (62, '02100'), (60, '02500'), (1, '06400'), (2, '26000'), (18, '41000'), (19, '45160'), (20, '45140'), (57, '59000'), (3, '76000'), (17, '69330'), (64, '62100\r\n')] 
+ code postal essay:[(63, '02300')]
+2018-07-10 17:04:27,197 :: INFO :: Begin to collect the price from https://www.fioulmarket.fr/
+2018-07-10 17:04:27,197 :: INFO :: site:https://www.fioulmarket.fr/ 
+ code postal obligatoire:[(4, '76290'), (5, '16000'), (6, '33150'), (7, '33270'), (8, '16100'), (9, '24000'), (10, '62200'), (11, '59140'), (12, '62500'), (13, '69300'), (14, '69130'), (15, '71000'), (16, '69230'), (21, '91220'), (22, '95000'), (23, '92260'), (24, '78200'), (25, '78310'), (26, '77000'), (27, '91230'), (28, '93330'), (29, '95520'), (30, '78370'), (31, '95230'), (32, '95150'), (33, '77100'), (34, '78140'), (35, '91140'), (36, '13400'), (37, '76200'), (38, '80350'), (39, '84300'), (40, '84130'), (41, '84000'), (42, '72000'), (43, '74000'), (44, '81100'), (45, '37170'), (46, '37540'), (47, '37000'), (48, '62000'), (49, '62400'), (50, '59500'), (51, '59320'), (52, '59220'), (53, '59115'), (54, '62950'), (55, '59223'), (56, '59650'), (58, '59300'), (59, '59400'), (61, '59720'), (63, '02300'), (62, '02100'), (60, '02500'), (1, '06400'), (2, '26000'), (18, '41000'), (19, '45160'), (20, '45140'), (57, '59000'), (3, '76000'), (17, '69330')] 
+ code postal essay:[(64, '62100\r\n')]
+2018-07-10 17:04:45,294 :: INFO :: try/retry to open the site:https://www.fioulmarket.fr/
+2018-07-10 17:04:47,302 :: INFO :: try/retry to open the site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:04:48,999 :: INFO :: succeed in opening this site:https://www.fioulmarket.fr/
+2018-07-10 17:04:50,442 :: INFO :: try/retry to open the site:https://www.fioulreduc.com/
+2018-07-10 17:04:54,133 :: INFO :: begin to init the program with configuration file
+2018-07-10 17:04:54,139 :: INFO :: get the email configuration succeed
+2018-07-10 17:04:54,139 :: INFO :: etat init
+2018-07-10 17:04:54,173 :: INFO :: it going to update the etat to 0
+2018-07-10 17:04:54,176 :: INFO :: etat set succeed
+2018-07-10 17:04:54,177 :: INFO :: try to connect to the database in order to get all the code postals
+2018-07-10 17:04:54,190 :: INFO :: connection succeed
+2018-07-10 17:04:54,191 :: INFO :: try to select code postals and sites from database
+2018-07-10 17:04:54,192 :: INFO :: selection of code postal and sites from database succeed
+2018-07-10 17:04:54,192 :: INFO :: begin to lance the thread
+2018-07-10 17:04:54,207 :: INFO :: Begin to collect the price from https://www.fioulmarket.fr/
+2018-07-10 17:04:54,207 :: INFO :: site:https://www.fioulmarket.fr/ 
+ code postal obligatoire:[(4, '76290'), (5, '16000'), (6, '33150'), (7, '33270'), (8, '16100'), (9, '24000'), (10, '62200'), (11, '59140'), (12, '62500'), (13, '69300'), (14, '69130'), (15, '71000'), (16, '69230'), (21, '91220'), (22, '95000'), (23, '92260'), (24, '78200'), (25, '78310'), (26, '77000'), (27, '91230'), (28, '93330'), (29, '95520'), (30, '78370'), (31, '95230'), (32, '95150'), (33, '77100'), (34, '78140'), (35, '91140'), (36, '13400'), (37, '76200'), (38, '80350'), (39, '84300'), (40, '84130'), (41, '84000'), (42, '72000'), (43, '74000'), (44, '81100'), (45, '37170'), (46, '37540'), (47, '37000'), (48, '62000'), (49, '62400'), (50, '59500'), (51, '59320'), (52, '59220'), (53, '59115'), (54, '62950'), (55, '59223'), (56, '59650'), (58, '59300'), (59, '59400'), (61, '59720'), (63, '02300'), (62, '02100'), (60, '02500'), (1, '06400'), (2, '26000'), (18, '41000'), (19, '45160'), (20, '45140'), (57, '59000'), (3, '76000'), (17, '69330')] 
+ code postal essay:[(64, '62100\r\n')]
+2018-07-10 17:04:54,209 :: INFO :: Begin to collect the price from https://www.fioulreduc.com/
+2018-07-10 17:04:54,209 :: INFO :: site:https://www.fioulreduc.com/ 
+ code postal obligatoire:[(4, '76290'), (5, '16000'), (6, '33150'), (7, '33270'), (8, '16100'), (9, '24000'), (10, '62200'), (11, '59140'), (12, '62500'), (13, '69300'), (14, '69130'), (15, '71000'), (16, '69230'), (21, '91220'), (22, '95000'), (23, '92260'), (24, '78200'), (25, '78310'), (26, '77000'), (27, '91230'), (28, '93330'), (29, '95520'), (30, '78370'), (31, '95230'), (32, '95150'), (33, '77100'), (34, '78140'), (35, '91140'), (36, '13400'), (37, '76200'), (38, '80350'), (39, '84300'), (40, '84130'), (41, '84000'), (42, '72000'), (43, '74000'), (44, '81100'), (45, '37170'), (46, '37540'), (47, '37000'), (48, '62000'), (49, '62400'), (50, '59500'), (51, '59320'), (52, '59220'), (53, '59115'), (54, '62950'), (55, '59223'), (56, '59650'), (58, '59300'), (59, '59400'), (61, '59720'), (62, '02100'), (60, '02500'), (1, '06400'), (2, '26000'), (18, '41000'), (19, '45160'), (20, '45140'), (57, '59000'), (3, '76000'), (17, '69330'), (64, '62100\r\n')] 
+ code postal essay:[(63, '02300')]
+2018-07-10 17:04:54,212 :: INFO :: Begin to collect the price from http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:04:54,212 :: INFO :: site:http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal obligatoire:[(4, '76290'), (6, '33150'), (7, '33270'), (9, '24000'), (10, '62200'), (11, '59140'), (12, '62500'), (13, '69300'), (14, '69130'), (15, '71000'), (16, '69230'), (21, '91220'), (22, '95000'), (23, '92260'), (24, '78200'), (25, '78310'), (26, '77000'), (27, '91230'), (28, '93330'), (29, '95520'), (30, '78370'), (31, '95230'), (32, '95150'), (33, '77100'), (34, '78140'), (35, '91140'), (36, '13400'), (39, '84300'), (40, '84130'), (41, '84000'), (42, '72000'), (43, '74000'), (45, '37170'), (46, '37540'), (47, '37000'), (48, '62000'), (49, '62400'), (50, '59500'), (51, '59320'), (52, '59220'), (53, '59115'), (54, '62950'), (55, '59223'), (56, '59650'), (58, '59300'), (59, '59400'), (61, '59720'), (63, '02300'), (62, '02100'), (1, '06400'), (2, '26000'), (18, '41000'), (19, '45160'), (20, '45140'), (57, '59000'), (3, '76000'), (17, '69330')] 
+ code postal essay:[(5, '16000'), (8, '16100'), (37, '76200'), (38, '80350'), (44, '81100'), (60, '02500'), (64, '62100\r\n')]
+2018-07-10 17:05:14,933 :: INFO :: try/retry to open the site:https://www.fioulmarket.fr/
+2018-07-10 17:05:16,143 :: INFO :: succeed in opening this site:https://www.fioulmarket.fr/
+2018-07-10 17:05:16,250 :: INFO :: try/retry to open the site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:05:18,228 :: INFO :: try/retry to open the site:https://www.fioulreduc.com/
+2018-07-10 17:05:20,353 :: INFO :: succeed in opening this site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:05:21,989 :: INFO :: succeed in opening this site:https://www.fioulreduc.com/
+2018-07-10 17:05:22,389 :: INFO :: Message: 
+
+2018-07-10 17:05:22,389 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info:The site's pub doesn't appear16000 
+2018-07-10 17:05:24,595 :: INFO :: Message: 
+
+2018-07-10 17:05:24,595 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info: The cookie request doesn't appear 
+ code postal:16000 
+2018-07-10 17:05:27,898 :: WARNING :: site: https://www.fioulreduc.com/ 
+ info: can't locate the options of livraison.possibility:
+ 1.the site don't supply for this code postal 
+ 2.the site don't allow chose the type of livraison temporary
+ code postal:02300 
+2018-07-10 17:05:27,898 :: INFO :: site: https://www.fioulreduc.com/ 
+ info: try to locate close button 
+ code postal:02300 
+2018-07-10 17:05:27,902 :: INFO :: located the close button
+2018-07-10 17:05:28,122 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:the site don't supply for this code postal temporary 
+ code postal:02300 
+2018-07-10 17:05:29,077 :: ERROR :: Message: 
+
+2018-07-10 17:05:29,077 :: ERROR :: site: https://www.fioulmarket.fr/ 
+ error: can't load livraison element 
+ code postal:62100
+ 
+2018-07-10 17:05:29,934 :: INFO :: Message: 
+
+2018-07-10 17:05:29,934 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error: can't load price element 
+ code postal:16000 
+2018-07-10 17:05:35,912 :: INFO :: Message: 
+
+2018-07-10 17:05:35,912 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:16100 
+2018-07-10 17:05:42,837 :: INFO :: Message: 
+
+2018-07-10 17:05:42,837 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:76200 
+2018-07-10 17:05:48,757 :: INFO :: Message: 
+
+2018-07-10 17:05:48,757 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:80350 
+2018-07-10 17:05:50,145 :: INFO :: try/retry to open the site:https://www.fioulmarket.fr/
+2018-07-10 17:05:50,249 :: INFO :: try/retry to open the site:https://www.fioulreduc.com/
+2018-07-10 17:05:53,143 :: INFO :: succeed in opening this site:https://www.fioulmarket.fr/
+2018-07-10 17:05:53,644 :: INFO :: succeed in opening this site:https://www.fioulreduc.com/
+2018-07-10 17:05:54,731 :: INFO :: Message: 
+
+2018-07-10 17:05:54,731 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:81100 
+2018-07-10 17:05:59,180 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:76290 
+ price:911
+2018-07-10 17:06:00,772 :: INFO :: Message: 
+
+2018-07-10 17:06:00,772 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:02500 
+2018-07-10 17:06:03,306 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:16000 
+ price:934
+2018-07-10 17:06:03,690 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:62100
+ 
+ prix: 904 
+2018-07-10 17:06:04,922 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:76290
+ prix:934 
+2018-07-10 17:06:07,431 :: INFO :: going to add some new code postal to the sitehttp://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:06:07,522 :: INFO :: site:http://www.carrefour.fr/services/fioul-domestique/ 
+ info:going to insert date into prix table 
+2018-07-10 17:06:07,624 :: INFO :: site:http://www.carrefour.fr/services/fioul-domestique/ 
+ info:succeed in inserting the data into the price table 
+2018-07-10 17:06:07,817 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:33150 
+ price:895
+2018-07-10 17:06:11,924 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:33270 
+ price:895
+2018-07-10 17:06:15,902 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:16100 
+ price:934
+2018-07-10 17:06:17,268 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:16000
+ prix:957 
+2018-07-10 17:06:21,785 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:24000 
+ price:927
+2018-07-10 17:06:26,031 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:62200 
+ price:905
+2018-07-10 17:06:29,870 :: INFO :: try/retry to open the site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:06:30,314 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59140 
+ price:909
+2018-07-10 17:06:30,708 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:33150
+ prix:921 
+2018-07-10 17:06:32,962 :: INFO :: succeed in opening this site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:06:34,306 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:62500 
+ price:918
+2018-07-10 17:06:35,006 :: INFO :: Message: 
+
+2018-07-10 17:06:35,006 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info:The site's pub doesn't appear76290 
+2018-07-10 17:06:37,126 :: INFO :: Message: 
+
+2018-07-10 17:06:37,126 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info: The cookie request doesn't appear 
+ code postal:76290 
+2018-07-10 17:06:37,483 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/
+info:the first collection finished in this site code postal:76290
+ prix:906 
+2018-07-10 17:06:38,125 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:69300 
+ price:909
+2018-07-10 17:06:40,810 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:33150 
+ prix: 898 
+2018-07-10 17:06:41,658 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:69130 
+ price:913
+2018-07-10 17:06:41,818 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:33270
+ prix:921 
+2018-07-10 17:06:45,894 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:71000 
+ price:926
+2018-07-10 17:06:48,861 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:33270 
+ prix: 898 
+2018-07-10 17:06:49,454 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:69230 
+ price:909
+2018-07-10 17:06:52,827 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:16100
+ prix:957 
+2018-07-10 17:06:53,067 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:91220 
+ price:907
+2018-07-10 17:06:56,890 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:95000 
+ price:898
+2018-07-10 17:06:57,235 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:24000 
+ prix: 924 
+2018-07-10 17:07:00,498 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:92260 
+ price:907
+2018-07-10 17:07:04,424 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:24000
+ prix:952 
+2018-07-10 17:07:04,895 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:78200 
+ price:900
+2018-07-10 17:07:05,548 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:62200 
+ prix: 904 
+2018-07-10 17:07:09,580 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:78310 
+ price:907
+2018-07-10 17:07:13,200 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:77000 
+ price:896
+2018-07-10 17:07:13,863 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59140 
+ prix: 904 
+2018-07-10 17:07:15,527 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:62200
+ prix:922 
+2018-07-10 17:07:16,684 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:91230 
+ price:907
+2018-07-10 17:07:20,512 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:93330 
+ price:907
+2018-07-10 17:07:21,777 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:62500 
+ prix: 904 
+2018-07-10 17:07:24,251 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:95520 
+ price:898
+2018-07-10 17:07:26,559 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:59140
+ prix:932 
+2018-07-10 17:07:27,885 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:78370 
+ price:907
+2018-07-10 17:07:30,108 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:69300 
+ prix: 898 
+2018-07-10 17:07:31,780 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:95230 
+ price:898
+2018-07-10 17:07:35,669 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:95150 
+ price:898
+2018-07-10 17:07:37,936 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:62500
+ prix:931 
+2018-07-10 17:07:38,418 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:69130 
+ prix: 898 
+2018-07-10 17:07:39,208 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:77100 
+ price:896
+2018-07-10 17:07:43,025 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:78140 
+ price:907
+2018-07-10 17:07:46,253 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:71000 
+ prix: 908 
+2018-07-10 17:07:46,477 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:91140 
+ price:907
+2018-07-10 17:07:48,782 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:69300
+ prix:926 
+2018-07-10 17:07:50,071 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:13400 
+ price:892
+2018-07-10 17:07:54,010 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:76200 
+ price:924
+2018-07-10 17:07:54,214 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:69230 
+ prix: 898 
+2018-07-10 17:07:59,317 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:69130
+ prix:926 
+2018-07-10 17:07:59,735 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:80350 
+ price:938
+2018-07-10 17:08:02,137 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:91220 
+ prix: 887 
+2018-07-10 17:08:06,023 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:84300 
+ price:906
+2018-07-10 17:08:10,494 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:95000 
+ prix: 889 
+2018-07-10 17:08:11,573 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:71000
+ prix:938 
+2018-07-10 17:08:11,896 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:84130 
+ price:906
+2018-07-10 17:08:17,936 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:84000 
+ price:906
+2018-07-10 17:08:18,823 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:92260 
+ prix: 889 
+2018-07-10 17:08:23,626 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:69230
+ prix:926 
+2018-07-10 17:08:23,793 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:72000 
+ price:899
+2018-07-10 17:08:27,188 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:78200 
+ prix: 889 
+2018-07-10 17:08:30,213 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:74000 
+ price:899
+2018-07-10 17:08:35,007 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:78310 
+ prix: 884 
+2018-07-10 17:08:35,368 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:91220
+ prix:919 
+2018-07-10 17:08:36,210 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:81100 
+ price:947
+2018-07-10 17:08:42,514 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:37170 
+ price:911
+2018-07-10 17:08:43,260 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:77000 
+ prix: 889 
+2018-07-10 17:08:48,392 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:37540 
+ price:899
+2018-07-10 17:08:50,577 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:95000
+ prix:931 
+2018-07-10 17:08:51,039 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:91230 
+ prix: 887 
+2018-07-10 17:08:56,029 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:37000 
+ price:899
+2018-07-10 17:08:59,409 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:93330 
+ prix: 889 
+2018-07-10 17:09:02,034 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:62000 
+ price:899
+2018-07-10 17:09:03,283 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:92260
+ prix:919 
+2018-07-10 17:09:07,882 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:95520 
+ prix: 889 
+2018-07-10 17:09:08,307 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:62400 
+ price:899
+2018-07-10 17:09:14,236 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:78200
+ prix:921 
+2018-07-10 17:09:14,266 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59500 
+ price:916
+2018-07-10 17:09:16,942 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:78370 
+ prix: 884 
+2018-07-10 17:09:20,427 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59320 
+ price:910
+2018-07-10 17:09:25,255 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:95230 
+ prix: 889 
+2018-07-10 17:09:25,806 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:78310
+ prix:919 
+2018-07-10 17:09:26,317 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59220 
+ price:920
+2018-07-10 17:09:32,242 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59115 
+ price:910
+2018-07-10 17:09:33,535 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:95150 
+ prix: 889 
+2018-07-10 17:09:37,615 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:77000
+ prix:921 
+2018-07-10 17:09:39,289 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:62950 
+ price:910
+2018-07-10 17:09:41,304 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:77100 
+ prix: 889 
+2018-07-10 17:09:45,533 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59223 
+ price:910
+2018-07-10 17:09:49,090 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:91230
+ prix:919 
+2018-07-10 17:09:49,639 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:78140 
+ prix: 884 
+2018-07-10 17:09:51,406 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59650 
+ price:910
+2018-07-10 17:09:57,340 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59300 
+ price:920
+2018-07-10 17:09:57,516 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:91140 
+ prix: 884 
+2018-07-10 17:10:03,151 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59400 
+ price:916
+2018-07-10 17:10:03,215 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:93330
+ prix:919 
+2018-07-10 17:10:05,821 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:13400 
+ prix: 888 
+2018-07-10 17:10:09,425 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59720 
+ price:920
+2018-07-10 17:10:13,706 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:84300 
+ prix: 891 
+2018-07-10 17:10:13,999 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:95520
+ prix:931 
+2018-07-10 17:10:17,891 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:02100 
+ price:897
+2018-07-10 17:10:22,659 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:84130 
+ prix: 891 
+2018-07-10 17:10:26,538 :: WARNING :: site: https://www.fioulreduc.com/ 
+ info: can't locate the options of livraison.possibility:
+ 1.the site don't supply for this code postal 
+ 2.the site don't allow chose the type of livraison temporary
+ code postal:02500 
+2018-07-10 17:10:26,538 :: INFO :: site: https://www.fioulreduc.com/ 
+ info: try to locate close button 
+ code postal:02500 
+2018-07-10 17:10:26,542 :: INFO :: Message: Unable to locate element: /html/body/div[3]/div[1]/button
+
+2018-07-10 17:10:26,543 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:the site don't allow chose the type of livraison temporary 
+ code postal:02500 
+2018-07-10 17:10:28,561 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:78370
+ prix:919 
+2018-07-10 17:10:30,452 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:84000 
+ prix: 891 
+2018-07-10 17:10:30,786 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:02500 
+ price:919
+2018-07-10 17:10:36,950 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:06400 
+ price:927
+2018-07-10 17:10:38,213 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:72000 
+ prix: 889 
+2018-07-10 17:10:40,209 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:95230
+ prix:927 
+2018-07-10 17:10:41,206 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:26000 
+ price:939
+2018-07-10 17:10:45,234 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:41000 
+ price:932
+2018-07-10 17:10:46,494 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:74000 
+ prix: 898 
+2018-07-10 17:10:49,314 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:45160 
+ price:942
+2018-07-10 17:10:51,182 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:95150
+ prix:927 
+2018-07-10 17:10:54,353 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:37170 
+ prix: 895 
+2018-07-10 17:10:54,672 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:45140 
+ price:917
+2018-07-10 17:11:00,820 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59000 
+ price:910
+2018-07-10 17:11:04,171 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:37540 
+ prix: 895 
+2018-07-10 17:11:05,024 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:76000 
+ price:900
+2018-07-10 17:11:08,315 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:77100
+ prix:931 
+2018-07-10 17:11:08,661 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:69330 
+ price:909
+2018-07-10 17:11:12,457 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:37000 
+ prix: 895 
+2018-07-10 17:11:13,115 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:62100
+ 
+ price:905
+2018-07-10 17:11:15,534 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:one end of the cycle 
+
+2018-07-10 17:11:15,535 :: INFO :: site:https://www.fioulreduc.com/ 
+ info:going to insert date into prix table 
+2018-07-10 17:11:15,720 :: INFO :: site:https://www.fioulreduc.com/ 
+ info:succeed in inserting the data into the price table 
+2018-07-10 17:11:15,720 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:end of the collection of price, collection succeed 
+
+2018-07-10 17:11:20,222 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:62000 
+ prix: 904 
+2018-07-10 17:11:21,144 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:78140
+ prix:919 
+2018-07-10 17:11:28,639 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:62400 
+ prix: 904 
+2018-07-10 17:11:34,865 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:91140
+ prix:919 
+2018-07-10 17:11:37,469 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59500 
+ prix: 904 
+2018-07-10 17:11:45,786 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59320 
+ prix: 904 
+2018-07-10 17:11:46,998 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:13400
+ prix:916 
+2018-07-10 17:11:53,630 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59220 
+ prix: 904 
+2018-07-10 17:12:02,601 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59115 
+ prix: 904 
+2018-07-10 17:12:06,255 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:76200
+ prix:937 
+2018-07-10 17:12:10,927 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:62950 
+ prix: 904 
+2018-07-10 17:12:17,365 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:80350
+ prix:938 
+2018-07-10 17:12:18,719 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59223 
+ prix: 904 
+2018-07-10 17:12:27,042 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59650 
+ prix: 904 
+2018-07-10 17:12:28,312 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:84300
+ prix:923 
+2018-07-10 17:12:34,962 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59300 
+ prix: 904 
+2018-07-10 17:12:41,011 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:84130
+ prix:923 
+2018-07-10 17:12:43,727 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59400 
+ prix: 904 
+2018-07-10 17:12:51,617 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59720 
+ prix: 904 
+2018-07-10 17:12:57,194 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:84000
+ prix:923 
+2018-07-10 17:13:00,399 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:02300 
+ prix: 899 
+2018-07-10 17:13:08,245 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:72000
+ prix:916 
+2018-07-10 17:13:08,640 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:02100 
+ prix: 899 
+2018-07-10 17:13:16,920 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:06400 
+ prix: 909 
+2018-07-10 17:13:19,409 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:74000
+ prix:921 
+2018-07-10 17:13:24,709 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:26000 
+ prix: 882 
+2018-07-10 17:13:32,192 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:81100
+ prix:950 
+2018-07-10 17:13:32,976 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:41000 
+ prix: 895 
+2018-07-10 17:13:41,240 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:45160 
+ prix: 901 
+2018-07-10 17:13:44,457 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:37170
+ prix:935 
+2018-07-10 17:13:49,643 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:45140 
+ prix: 901 
+2018-07-10 17:13:55,438 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:37540
+ prix:924 
+2018-07-10 17:13:57,951 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59000 
+ prix: 904 
+2018-07-10 17:14:06,240 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:76000 
+ prix: 906 
+2018-07-10 17:14:06,771 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:37000
+ prix:924 
+2018-07-10 17:14:14,542 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:69330 
+ prix: 898 
+2018-07-10 17:14:17,626 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:62000
+ prix:927 
+2018-07-10 17:14:21,491 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info:one end of the cycle 
+
+2018-07-10 17:14:21,491 :: INFO :: site:http://www.carrefour.fr/services/fioul-domestique/ 
+ info:going to insert date into prix table 
+2018-07-10 17:14:21,542 :: INFO :: site:http://www.carrefour.fr/services/fioul-domestique/ 
+ info:succeed in inserting the data into the price table 
+2018-07-10 17:14:21,542 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info:end of the collection of price, collection succeed 
+
+2018-07-10 17:14:28,654 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:62400
+ prix:917 
+2018-07-10 17:14:40,058 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:59500
+ prix:927 
+2018-07-10 17:14:52,729 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:59320
+ prix:932 
+2018-07-10 17:15:11,336 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:59220
+ prix:932 
+2018-07-10 17:15:22,510 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:59115
+ prix:932 
+2018-07-10 17:15:33,708 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:62950
+ prix:927 
+2018-07-10 17:15:44,564 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:59223
+ prix:932 
+2018-07-10 17:15:56,597 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:59650
+ prix:932 
+2018-07-10 17:16:07,665 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:59300
+ prix:932 
+2018-07-10 17:16:19,077 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:59400
+ prix:927 
+2018-07-10 17:16:30,082 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:59720
+ prix:932 
+2018-07-10 17:16:45,143 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:02300
+ prix:919 
+2018-07-10 17:16:56,185 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:02100
+ prix:919 
+2018-07-10 17:17:07,152 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:02500
+ prix:931 
+2018-07-10 17:17:22,111 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:06400
+ prix:937 
+2018-07-10 17:17:33,085 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:26000
+ prix:910 
+2018-07-10 17:17:47,734 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:41000
+ prix:925 
+2018-07-10 17:18:06,809 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:45160
+ prix:929 
+2018-07-10 17:18:19,757 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:45140
+ prix:929 
+2018-07-10 17:18:31,144 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:59000
+ prix:932 
+2018-07-10 17:18:42,487 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:76000
+ prix:926 
+2018-07-10 17:18:53,589 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:69330
+ prix:926 
+2018-07-10 17:18:57,476 :: INFO :: site: https://www.fioulmarket.fr/ 
+ info:one end of the cycle 
+
+2018-07-10 17:18:57,476 :: INFO :: site:https://www.fioulmarket.fr/ 
+ info:going to insert date into prix table 
+2018-07-10 17:18:57,667 :: INFO :: site:https://www.fioulmarket.fr/ 
+ info:succeed in inserting the data into the price table 
+2018-07-10 17:18:57,667 :: INFO :: site: https://www.fioulmarket.fr/ 
+ info:end of the collection of price, collection succeed 
+
+2018-07-10 17:18:57,667 :: INFO :: lance the thread succeed
+2018-07-10 17:18:57,667 :: INFO :: begin to lance the thread
+2018-07-10 17:18:57,800 :: INFO :: Begin to collect the price from http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:18:57,800 :: INFO :: site:http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal obligatoire:[] 
+ code postal essay:[(5, '16000'), (8, '16100'), (37, '76200'), (38, '80350'), (44, '81100'), (60, '02500')]
+2018-07-10 17:18:57,815 :: INFO :: Begin to collect the price from https://www.fioulreduc.com/
+2018-07-10 17:18:57,816 :: INFO :: site:https://www.fioulreduc.com/ 
+ code postal obligatoire:[] 
+ code postal essay:[(63, '02300')]
+2018-07-10 17:18:57,827 :: INFO :: Begin to collect the price from https://www.fioulmarket.fr/
+2018-07-10 17:18:57,827 :: INFO :: site:https://www.fioulmarket.fr/ 
+ code postal obligatoire:[] 
+ code postal essay:[(64, '62100\r\n')]
+2018-07-10 17:19:20,598 :: INFO :: try/retry to open the site:https://www.fioulmarket.fr/
+2018-07-10 17:19:22,926 :: INFO :: try/retry to open the site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:19:24,068 :: INFO :: try/retry to open the site:https://www.fioulreduc.com/
+2018-07-10 17:19:29,620 :: INFO :: succeed in opening this site:https://www.fioulmarket.fr/
+2018-07-10 17:19:35,976 :: INFO :: succeed in opening this site:https://www.fioulreduc.com/
+2018-07-10 17:19:36,152 :: INFO :: succeed in opening this site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:19:39,773 :: INFO :: Message: 
+
+2018-07-10 17:19:39,773 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info:The site's pub doesn't appear16000 
+2018-07-10 17:19:41,720 :: WARNING :: site: https://www.fioulreduc.com/ 
+ info: can't locate the options of livraison.possibility:
+ 1.the site don't supply for this code postal 
+ 2.the site don't allow chose the type of livraison temporary
+ code postal:02300 
+2018-07-10 17:19:41,720 :: INFO :: site: https://www.fioulreduc.com/ 
+ info: try to locate close button 
+ code postal:02300 
+2018-07-10 17:19:41,727 :: INFO :: located the close button
+2018-07-10 17:19:41,887 :: INFO :: Message: 
+
+2018-07-10 17:19:41,887 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info: The cookie request doesn't appear 
+ code postal:16000 
+2018-07-10 17:19:41,943 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:the site don't supply for this code postal temporary 
+ code postal:02300 
+2018-07-10 17:19:45,055 :: ERROR :: Message: 
+
+2018-07-10 17:19:45,055 :: ERROR :: site: https://www.fioulmarket.fr/ 
+ error: can't load livraison element 
+ code postal:62100
+ 
+2018-07-10 17:19:47,266 :: INFO :: Message: 
+
+2018-07-10 17:19:47,266 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error: can't load price element 
+ code postal:16000 
+2018-07-10 17:19:54,105 :: INFO :: Message: 
+
+2018-07-10 17:19:54,105 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:16100 
+2018-07-10 17:20:00,235 :: INFO :: Message: 
+
+2018-07-10 17:20:00,235 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:76200 
+2018-07-10 17:20:04,020 :: INFO :: try/retry to open the site:https://www.fioulmarket.fr/
+2018-07-10 17:20:05,708 :: INFO :: try/retry to open the site:https://www.fioulreduc.com/
+2018-07-10 17:20:06,153 :: INFO :: Message: 
+
+2018-07-10 17:20:06,153 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:80350 
+2018-07-10 17:20:08,243 :: INFO :: succeed in opening this site:https://www.fioulmarket.fr/
+2018-07-10 17:20:10,057 :: INFO :: succeed in opening this site:https://www.fioulreduc.com/
+2018-07-10 17:20:10,371 :: INFO :: site: https://www.fioulmarket.fr/ 
+ info:one end of the cycle 
+
+2018-07-10 17:20:10,371 :: INFO :: site: https://www.fioulmarket.fr/ 
+ info:end of the collection of price, collection succeed 
+
+2018-07-10 17:20:11,444 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:one end of the cycle 
+
+2018-07-10 17:20:11,444 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:end of the collection of price, collection succeed 
+
+2018-07-10 17:20:12,056 :: INFO :: Message: 
+
+2018-07-10 17:20:12,056 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:81100 
+2018-07-10 17:20:17,877 :: INFO :: Message: 
+
+2018-07-10 17:20:17,877 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:02500 
+2018-07-10 17:20:38,350 :: INFO :: try/retry to open the site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:20:40,970 :: INFO :: succeed in opening this site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:20:42,283 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info:one end of the cycle 
+
+2018-07-10 17:20:42,285 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info:end of the collection of price, collection succeed 
+
+2018-07-10 17:20:42,286 :: INFO :: lance the thread succeed
+2018-07-10 17:20:42,286 :: INFO :: Program finish with success, it going to set the etat as 1
+2018-07-10 17:20:42,286 :: INFO :: it going to update the etat to 1
+2018-07-10 17:20:42,301 :: INFO :: etat set succeed
+2018-07-10 17:20:42,302 :: INFO :: it goinug to get the etat from the database
+2018-07-10 17:20:42,327 :: INFO :: get the stat succeed
+2018-07-10 17:20:42,328 :: INFO :: it going to send a succeed signal
+2018-07-10 17:20:45,235 :: INFO :: This program this time spent 951 s
+2018-07-10 17:24:29,149 :: INFO :: begin to init the program with configuration file
+2018-07-10 17:24:29,154 :: INFO :: get the email configuration succeed
+2018-07-10 17:24:29,154 :: INFO :: etat init
+2018-07-10 17:24:29,158 :: INFO :: it going to update the etat to 0
+2018-07-10 17:24:29,256 :: INFO :: etat set succeed
+2018-07-10 17:24:29,256 :: INFO :: try to connect to the database in order to get all the code postals
+2018-07-10 17:24:29,343 :: INFO :: connection succeed
+2018-07-10 17:24:29,343 :: INFO :: try to select code postals and sites from database
+2018-07-10 17:24:29,345 :: INFO :: selection of code postal and sites from database succeed
+2018-07-10 17:24:29,345 :: INFO :: begin to lance the thread
+2018-07-10 17:24:29,400 :: INFO :: Begin to collect the price from http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:24:29,400 :: INFO :: site:http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal obligatoire:[(4, '76290'), (6, '33150'), (7, '33270'), (9, '24000'), (10, '62200'), (11, '59140'), (12, '62500'), (13, '69300'), (14, '69130'), (15, '71000'), (16, '69230'), (21, '91220'), (22, '95000'), (23, '92260'), (24, '78200'), (25, '78310'), (26, '77000'), (27, '91230'), (28, '93330'), (29, '95520'), (30, '78370'), (31, '95230'), (32, '95150'), (33, '77100'), (34, '78140'), (35, '91140'), (36, '13400'), (39, '84300'), (40, '84130'), (41, '84000'), (42, '72000'), (43, '74000'), (45, '37170'), (46, '37540'), (47, '37000'), (48, '62000'), (49, '62400'), (50, '59500'), (51, '59320'), (52, '59220'), (53, '59115'), (54, '62950'), (55, '59223'), (56, '59650'), (58, '59300'), (59, '59400'), (61, '59720'), (63, '02300'), (62, '02100'), (1, '06400'), (2, '26000'), (18, '41000'), (19, '45160'), (20, '45140'), (57, '59000'), (3, '76000'), (17, '69330'), (64, '62100\r\n')] 
+ code postal essay:[(5, '16000'), (8, '16100'), (37, '76200'), (38, '80350'), (44, '81100'), (60, '02500')]
+2018-07-10 17:24:29,401 :: INFO :: Begin to collect the price from https://www.fioulmarket.fr/
+2018-07-10 17:24:29,402 :: INFO :: site:https://www.fioulmarket.fr/ 
+ code postal obligatoire:[(4, '76290'), (5, '16000'), (6, '33150'), (7, '33270'), (8, '16100'), (9, '24000'), (10, '62200'), (11, '59140'), (12, '62500'), (13, '69300'), (14, '69130'), (15, '71000'), (16, '69230'), (21, '91220'), (22, '95000'), (23, '92260'), (24, '78200'), (25, '78310'), (26, '77000'), (27, '91230'), (28, '93330'), (29, '95520'), (30, '78370'), (31, '95230'), (32, '95150'), (33, '77100'), (34, '78140'), (35, '91140'), (36, '13400'), (37, '76200'), (38, '80350'), (39, '84300'), (40, '84130'), (41, '84000'), (42, '72000'), (43, '74000'), (44, '81100'), (45, '37170'), (46, '37540'), (47, '37000'), (48, '62000'), (49, '62400'), (50, '59500'), (51, '59320'), (52, '59220'), (53, '59115'), (54, '62950'), (55, '59223'), (56, '59650'), (58, '59300'), (59, '59400'), (61, '59720'), (63, '02300'), (62, '02100'), (60, '02500'), (1, '06400'), (2, '26000'), (18, '41000'), (19, '45160'), (20, '45140'), (57, '59000'), (3, '76000'), (17, '69330')] 
+ code postal essay:[(64, '62100\r\n')]
+2018-07-10 17:24:29,422 :: INFO :: Begin to collect the price from https://www.fioulreduc.com/
+2018-07-10 17:24:29,422 :: INFO :: site:https://www.fioulreduc.com/ 
+ code postal obligatoire:[(4, '76290'), (5, '16000'), (6, '33150'), (7, '33270'), (8, '16100'), (9, '24000'), (10, '62200'), (11, '59140'), (12, '62500'), (13, '69300'), (14, '69130'), (15, '71000'), (16, '69230'), (21, '91220'), (22, '95000'), (23, '92260'), (24, '78200'), (25, '78310'), (26, '77000'), (27, '91230'), (28, '93330'), (29, '95520'), (30, '78370'), (31, '95230'), (32, '95150'), (33, '77100'), (34, '78140'), (35, '91140'), (36, '13400'), (37, '76200'), (38, '80350'), (39, '84300'), (40, '84130'), (41, '84000'), (42, '72000'), (43, '74000'), (44, '81100'), (45, '37170'), (46, '37540'), (47, '37000'), (48, '62000'), (49, '62400'), (50, '59500'), (51, '59320'), (52, '59220'), (53, '59115'), (54, '62950'), (55, '59223'), (56, '59650'), (58, '59300'), (59, '59400'), (61, '59720'), (62, '02100'), (60, '02500'), (1, '06400'), (2, '26000'), (18, '41000'), (19, '45160'), (20, '45140'), (57, '59000'), (3, '76000'), (17, '69330'), (64, '62100\r\n')] 
+ code postal essay:[(63, '02300')]
+2018-07-10 17:24:49,806 :: INFO :: try/retry to open the site:https://www.fioulmarket.fr/
+2018-07-10 17:24:52,711 :: INFO :: try/retry to open the site:https://www.fioulreduc.com/
+2018-07-10 17:24:53,851 :: INFO :: try/retry to open the site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:24:57,894 :: INFO :: succeed in opening this site:https://www.fioulmarket.fr/
+2018-07-10 17:25:01,737 :: INFO :: succeed in opening this site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:25:01,757 :: INFO :: succeed in opening this site:https://www.fioulreduc.com/
+2018-07-10 17:25:04,420 :: INFO :: Message: 
+
+2018-07-10 17:25:04,420 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info:The site's pub doesn't appear16000 
+2018-07-10 17:25:06,494 :: INFO :: Message: 
+
+2018-07-10 17:25:06,494 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info: The cookie request doesn't appear 
+ code postal:16000 
+2018-07-10 17:25:07,493 :: WARNING :: site: https://www.fioulreduc.com/ 
+ info: can't locate the options of livraison.possibility:
+ 1.the site don't supply for this code postal 
+ 2.the site don't allow chose the type of livraison temporary
+ code postal:02300 
+2018-07-10 17:25:07,493 :: INFO :: site: https://www.fioulreduc.com/ 
+ info: try to locate close button 
+ code postal:02300 
+2018-07-10 17:25:07,501 :: INFO :: located the close button
+2018-07-10 17:25:07,721 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:the site don't supply for this code postal temporary 
+ code postal:02300 
+2018-07-10 17:25:12,189 :: INFO :: Message: 
+
+2018-07-10 17:25:12,189 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error: can't load price element 
+ code postal:16000 
+2018-07-10 17:25:19,281 :: INFO :: Message: 
+
+2018-07-10 17:25:19,281 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:16100 
+2018-07-10 17:25:19,804 :: ERROR :: Message: 
+
+2018-07-10 17:25:19,804 :: ERROR :: site: https://www.fioulmarket.fr/ 
+ error: can't load livraison element 
+ code postal:62100
+ 
+2018-07-10 17:25:24,769 :: INFO :: try/retry to open the site:https://www.fioulreduc.com/
+2018-07-10 17:25:25,163 :: INFO :: Message: 
+
+2018-07-10 17:25:25,163 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:76200 
+2018-07-10 17:25:28,120 :: INFO :: succeed in opening this site:https://www.fioulreduc.com/
+2018-07-10 17:25:32,192 :: INFO :: Message: 
+
+2018-07-10 17:25:32,192 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:80350 
+2018-07-10 17:25:35,553 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:76290 
+ price:911
+2018-07-10 17:25:38,032 :: INFO :: try/retry to open the site:https://www.fioulmarket.fr/
+2018-07-10 17:25:38,184 :: INFO :: Message: 
+
+2018-07-10 17:25:38,184 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:81100 
+2018-07-10 17:25:40,255 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:16000 
+ price:934
+2018-07-10 17:25:41,102 :: INFO :: succeed in opening this site:https://www.fioulmarket.fr/
+2018-07-10 17:25:44,064 :: INFO :: Message: 
+
+2018-07-10 17:25:44,064 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:02500 
+2018-07-10 17:25:44,067 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:33150 
+ price:895
+2018-07-10 17:25:47,912 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:33270 
+ price:895
+2018-07-10 17:25:51,456 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:16100 
+ price:934
+2018-07-10 17:25:56,221 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:24000 
+ price:927
+2018-07-10 17:25:56,243 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:76290
+ prix:904 
+2018-07-10 17:26:00,250 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:62200 
+ price:905
+2018-07-10 17:26:03,042 :: INFO :: try/retry to open the site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:26:04,554 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59140 
+ price:909
+2018-07-10 17:26:07,515 :: INFO :: succeed in opening this site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:26:08,356 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:62500 
+ price:918
+2018-07-10 17:26:09,540 :: INFO :: Message: 
+
+2018-07-10 17:26:09,541 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info:The site's pub doesn't appear76290 
+2018-07-10 17:26:09,601 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:16000
+ prix:927 
+2018-07-10 17:26:11,674 :: INFO :: Message: 
+
+2018-07-10 17:26:11,674 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info: The cookie request doesn't appear 
+ code postal:76290 
+2018-07-10 17:26:12,126 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:69300 
+ price:909
+2018-07-10 17:26:12,472 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/
+info:the first collection finished in this site code postal:76290
+ prix:906 
+2018-07-10 17:26:15,391 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:33150 
+ prix: 898 
+2018-07-10 17:26:15,952 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:69130 
+ price:913
+2018-07-10 17:26:19,526 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:71000 
+ price:926
+2018-07-10 17:26:22,060 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:33150
+ prix:891 
+2018-07-10 17:26:23,212 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:69230 
+ price:909
+2018-07-10 17:26:25,159 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:33270 
+ prix: 898 
+2018-07-10 17:26:26,949 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:91220 
+ price:907
+2018-07-10 17:26:30,537 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:95000 
+ price:898
+2018-07-10 17:26:33,036 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:24000 
+ prix: 924 
+2018-07-10 17:26:34,536 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:33270
+ prix:891 
+2018-07-10 17:26:34,751 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:92260 
+ price:907
+2018-07-10 17:26:38,873 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:78200 
+ price:900
+2018-07-10 17:26:41,391 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:62200 
+ prix: 904 
+2018-07-10 17:26:42,670 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:78310 
+ price:907
+2018-07-10 17:26:45,161 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:16100
+ prix:927 
+2018-07-10 17:26:46,281 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:77000 
+ price:896
+2018-07-10 17:26:49,689 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59140 
+ prix: 904 
+2018-07-10 17:26:50,047 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:91230 
+ price:907
+2018-07-10 17:26:53,653 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:93330 
+ price:907
+2018-07-10 17:26:56,175 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:24000
+ prix:922 
+2018-07-10 17:26:57,474 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:95520 
+ price:898
+2018-07-10 17:26:59,511 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:62500 
+ prix: 904 
+2018-07-10 17:27:01,127 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:78370 
+ price:907
+2018-07-10 17:27:05,190 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:95230 
+ price:898
+2018-07-10 17:27:06,904 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:62200
+ prix:892 
+2018-07-10 17:27:07,669 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:69300 
+ prix: 898 
+2018-07-10 17:27:08,830 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:95150 
+ price:898
+2018-07-10 17:27:12,481 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:77100 
+ price:896
+2018-07-10 17:27:15,959 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:78140 
+ price:907
+2018-07-10 17:27:17,746 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:59140
+ prix:902 
+2018-07-10 17:27:17,798 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:69130 
+ prix: 898 
+2018-07-10 17:27:20,226 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:91140 
+ price:907
+2018-07-10 17:27:24,306 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:13400 
+ price:892
+2018-07-10 17:27:25,706 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:71000 
+ prix: 908 
+2018-07-10 17:27:28,424 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:76200 
+ price:924
+2018-07-10 17:27:28,626 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:62500
+ prix:901 
+2018-07-10 17:27:33,613 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:69230 
+ prix: 898 
+2018-07-10 17:27:35,077 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:80350 
+ price:938
+2018-07-10 17:27:39,503 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:69300
+ prix:896 
+2018-07-10 17:27:40,934 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:84300 
+ price:906
+2018-07-10 17:27:41,471 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:91220 
+ prix: 887 
+2018-07-10 17:27:46,819 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:84130 
+ price:906
+2018-07-10 17:27:49,783 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:95000 
+ prix: 889 
+2018-07-10 17:27:50,187 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:69130
+ prix:896 
+2018-07-10 17:27:52,663 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:84000 
+ price:906
+2018-07-10 17:27:57,564 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:92260 
+ prix: 889 
+2018-07-10 17:27:58,666 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:72000 
+ price:899
+2018-07-10 17:28:02,732 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:71000
+ prix:908 
+2018-07-10 17:28:04,505 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:74000 
+ price:899
+2018-07-10 17:28:05,403 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:78200 
+ prix: 889 
+2018-07-10 17:28:10,535 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:81100 
+ price:947
+2018-07-10 17:28:13,666 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:78310 
+ prix: 884 
+2018-07-10 17:28:15,164 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:69230
+ prix:896 
+2018-07-10 17:28:16,353 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:37170 
+ price:911
+2018-07-10 17:28:21,984 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:77000 
+ prix: 889 
+2018-07-10 17:28:23,943 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:37540 
+ price:899
+2018-07-10 17:28:27,919 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:91220
+ prix:889 
+2018-07-10 17:28:30,267 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:91230 
+ prix: 887 
+2018-07-10 17:28:34,641 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:37000 
+ price:899
+2018-07-10 17:28:38,572 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:93330 
+ prix: 889 
+2018-07-10 17:28:42,227 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:62000 
+ price:899
+2018-07-10 17:28:42,676 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:95000
+ prix:931 
+2018-07-10 17:28:47,017 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:95520 
+ prix: 889 
+2018-07-10 17:28:48,537 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:62400 
+ price:899
+2018-07-10 17:28:54,438 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59500 
+ price:916
+2018-07-10 17:28:56,692 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:92260
+ prix:889 
+2018-07-10 17:28:57,203 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:78370 
+ prix: 884 
+2018-07-10 17:29:00,482 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59320 
+ price:910
+2018-07-10 17:29:05,067 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:95230 
+ prix: 889 
+2018-07-10 17:29:06,298 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59220 
+ price:920
+2018-07-10 17:29:07,656 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:78200
+ prix:891 
+2018-07-10 17:29:12,282 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59115 
+ price:910
+2018-07-10 17:29:13,384 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:95150 
+ prix: 889 
+2018-07-10 17:29:18,018 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:62950 
+ price:910
+2018-07-10 17:29:18,491 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:78310
+ prix:889 
+2018-07-10 17:29:22,952 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:77100 
+ prix: 889 
+2018-07-10 17:29:23,963 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59223 
+ price:910
+2018-07-10 17:29:30,010 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59650 
+ price:910
+2018-07-10 17:29:31,251 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:78140 
+ prix: 884 
+2018-07-10 17:29:31,991 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:77000
+ prix:891 
+2018-07-10 17:29:35,857 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59300 
+ price:920
+2018-07-10 17:29:39,064 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:91140 
+ prix: 884 
+2018-07-10 17:29:41,751 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59400 
+ price:916
+2018-07-10 17:29:44,663 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:91230
+ prix:889 
+2018-07-10 17:29:46,840 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:13400 
+ prix: 888 
+2018-07-10 17:29:49,558 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59720 
+ price:920
+2018-07-10 17:29:55,160 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:84300 
+ prix: 891 
+2018-07-10 17:29:55,400 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:93330
+ prix:889 
+2018-07-10 17:29:55,512 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:02100 
+ price:897
+2018-07-10 17:30:02,575 :: WARNING :: site: https://www.fioulreduc.com/ 
+ info: can't locate the options of livraison.possibility:
+ 1.the site don't supply for this code postal 
+ 2.the site don't allow chose the type of livraison temporary
+ code postal:02500 
+2018-07-10 17:30:02,576 :: INFO :: site: https://www.fioulreduc.com/ 
+ info: try to locate close button 
+ code postal:02500 
+2018-07-10 17:30:02,580 :: INFO :: Message: Unable to locate element: /html/body/div[3]/div[1]/button
+
+2018-07-10 17:30:02,580 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:the site don't allow chose the type of livraison temporary 
+ code postal:02500 
+2018-07-10 17:30:03,472 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:84130 
+ prix: 891 
+2018-07-10 17:30:06,252 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:95520
+ prix:901 
+2018-07-10 17:30:06,414 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:02500 
+ price:919
+2018-07-10 17:30:11,876 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:84000 
+ prix: 891 
+2018-07-10 17:30:12,269 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:06400 
+ price:927
+2018-07-10 17:30:15,685 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:26000 
+ price:939
+2018-07-10 17:30:17,578 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:78370
+ prix:889 
+2018-07-10 17:30:19,332 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:41000 
+ price:932
+2018-07-10 17:30:19,729 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:72000 
+ prix: 889 
+2018-07-10 17:30:22,922 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:45160 
+ price:942
+2018-07-10 17:30:26,766 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:45140 
+ price:917
+2018-07-10 17:30:28,029 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:74000 
+ prix: 898 
+2018-07-10 17:30:30,383 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:59000 
+ price:910
+2018-07-10 17:30:30,697 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:95230
+ prix:897 
+2018-07-10 17:30:34,687 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:76000 
+ price:900
+2018-07-10 17:30:35,805 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:37170 
+ prix: 895 
+2018-07-10 17:30:38,962 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:69330 
+ price:909
+2018-07-10 17:30:42,578 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:succeed in collecting the price  
+ code postal:62100
+ 
+ price:905
+2018-07-10 17:30:42,645 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:95150
+ prix:897 
+2018-07-10 17:30:44,583 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:37540 
+ prix: 895 
+2018-07-10 17:30:45,379 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:one end of the cycle 
+
+2018-07-10 17:30:45,379 :: INFO :: site:https://www.fioulreduc.com/ 
+ info:going to insert date into prix table 
+2018-07-10 17:30:45,536 :: INFO :: site:https://www.fioulreduc.com/ 
+ info:succeed in inserting the data into the price table 
+2018-07-10 17:30:45,536 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:end of the collection of price, collection succeed 
+
+2018-07-10 17:30:52,330 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:37000 
+ prix: 895 
+2018-07-10 17:30:57,592 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:77100
+ prix:931 
+2018-07-10 17:31:00,621 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:62000 
+ prix: 904 
+2018-07-10 17:31:08,199 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:78140
+ prix:889 
+2018-07-10 17:31:08,919 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:62400 
+ prix: 904 
+2018-07-10 17:31:18,271 :: INFO :: begin to init the program with configuration file
+2018-07-10 17:31:18,313 :: INFO :: get the email configuration succeed
+2018-07-10 17:31:18,313 :: INFO :: etat init
+2018-07-10 17:31:18,339 :: INFO :: it going to update the etat to 0
+2018-07-10 17:31:18,355 :: INFO :: etat set succeed
+2018-07-10 17:31:18,355 :: INFO :: try to connect to the database in order to get all the code postals
+2018-07-10 17:31:18,367 :: INFO :: connection succeed
+2018-07-10 17:31:18,367 :: INFO :: try to select code postals and sites from database
+2018-07-10 17:31:18,369 :: INFO :: selection of code postal and sites from database succeed
+2018-07-10 17:31:18,369 :: INFO :: begin to lance the thread
+2018-07-10 17:31:18,373 :: INFO :: Begin to collect the price from http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:31:18,374 :: INFO :: site:http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal obligatoire:[(4, '76290'), (6, '33150'), (7, '33270'), (9, '24000'), (10, '62200'), (11, '59140'), (12, '62500'), (13, '69300'), (14, '69130'), (15, '71000'), (16, '69230'), (21, '91220'), (22, '95000'), (23, '92260'), (24, '78200'), (25, '78310'), (26, '77000'), (27, '91230'), (28, '93330'), (29, '95520'), (30, '78370'), (31, '95230'), (32, '95150'), (33, '77100'), (34, '78140'), (35, '91140'), (36, '13400'), (39, '84300'), (40, '84130'), (41, '84000'), (42, '72000'), (43, '74000'), (45, '37170'), (46, '37540'), (47, '37000'), (48, '62000'), (49, '62400'), (50, '59500'), (51, '59320'), (52, '59220'), (53, '59115'), (54, '62950'), (55, '59223'), (56, '59650'), (58, '59300'), (59, '59400'), (61, '59720'), (63, '02300'), (62, '02100'), (1, '06400'), (2, '26000'), (18, '41000'), (19, '45160'), (20, '45140'), (57, '59000'), (3, '76000'), (17, '69330'), (64, '62100\r\n')] 
+ code postal essay:[(5, '16000'), (8, '16100'), (37, '76200'), (38, '80350'), (44, '81100'), (60, '02500')]
+2018-07-10 17:31:18,375 :: INFO :: Begin to collect the price from https://www.fioulreduc.com/
+2018-07-10 17:31:18,375 :: INFO :: site:https://www.fioulreduc.com/ 
+ code postal obligatoire:[] 
+ code postal essay:[(63, '02300')]
+2018-07-10 17:31:18,417 :: INFO :: Begin to collect the price from https://www.fioulmarket.fr/
+2018-07-10 17:31:18,417 :: INFO :: site:https://www.fioulmarket.fr/ 
+ code postal obligatoire:[(4, '76290'), (5, '16000'), (6, '33150'), (7, '33270'), (8, '16100'), (9, '24000'), (10, '62200'), (11, '59140'), (12, '62500'), (13, '69300'), (14, '69130'), (15, '71000'), (16, '69230'), (21, '91220'), (22, '95000'), (23, '92260'), (24, '78200'), (25, '78310'), (26, '77000'), (27, '91230'), (28, '93330'), (29, '95520'), (30, '78370'), (31, '95230'), (32, '95150'), (33, '77100'), (34, '78140'), (35, '91140'), (36, '13400'), (37, '76200'), (38, '80350'), (39, '84300'), (40, '84130'), (41, '84000'), (42, '72000'), (43, '74000'), (44, '81100'), (45, '37170'), (46, '37540'), (47, '37000'), (48, '62000'), (49, '62400'), (50, '59500'), (51, '59320'), (52, '59220'), (53, '59115'), (54, '62950'), (55, '59223'), (56, '59650'), (58, '59300'), (59, '59400'), (61, '59720'), (63, '02300'), (62, '02100'), (60, '02500'), (1, '06400'), (2, '26000'), (18, '41000'), (19, '45160'), (20, '45140'), (57, '59000'), (3, '76000'), (17, '69330')] 
+ code postal essay:[(64, '62100\r\n')]
+2018-07-10 17:31:45,607 :: INFO :: try/retry to open the site:https://www.fioulreduc.com/
+2018-07-10 17:31:45,724 :: INFO :: try/retry to open the site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:31:46,655 :: INFO :: try/retry to open the site:https://www.fioulmarket.fr/
+2018-07-10 17:31:50,058 :: INFO :: succeed in opening this site:https://www.fioulmarket.fr/
+2018-07-10 17:31:54,428 :: INFO :: succeed in opening this site:https://www.fioulreduc.com/
+2018-07-10 17:32:00,189 :: WARNING :: site: https://www.fioulreduc.com/ 
+ info: can't locate the options of livraison.possibility:
+ 1.the site don't supply for this code postal 
+ 2.the site don't allow chose the type of livraison temporary
+ code postal:02300 
+2018-07-10 17:32:00,189 :: INFO :: site: https://www.fioulreduc.com/ 
+ info: try to locate close button 
+ code postal:02300 
+2018-07-10 17:32:00,195 :: INFO :: located the close button
+2018-07-10 17:32:00,417 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:the site don't supply for this code postal temporary 
+ code postal:02300 
+2018-07-10 17:32:05,668 :: INFO :: succeed in opening this site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:32:07,450 :: ERROR :: Message: 
+
+2018-07-10 17:32:07,450 :: ERROR :: site: https://www.fioulmarket.fr/ 
+ error: can't load livraison element 
+ code postal:62100
+ 
+2018-07-10 17:32:08,844 :: INFO :: Message: 
+
+2018-07-10 17:32:08,844 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info:The site's pub doesn't appear16000 
+2018-07-10 17:32:12,534 :: INFO :: Message: 
+
+2018-07-10 17:32:12,534 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info: The cookie request doesn't appear 
+ code postal:16000 
+2018-07-10 17:32:18,310 :: INFO :: Message: 
+
+2018-07-10 17:32:18,352 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error: can't load price element 
+ code postal:16000 
+2018-07-10 17:32:20,167 :: INFO :: try/retry to open the site:https://www.fioulreduc.com/
+2018-07-10 17:32:23,446 :: INFO :: succeed in opening this site:https://www.fioulreduc.com/
+2018-07-10 17:32:25,083 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:one end of the cycle 
+
+2018-07-10 17:32:25,083 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:end of the collection of price, collection succeed 
+
+2018-07-10 17:32:26,041 :: INFO :: Message: 
+
+2018-07-10 17:32:26,041 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:16100 
+2018-07-10 17:32:26,781 :: INFO :: try/retry to open the site:https://www.fioulmarket.fr/
+2018-07-10 17:32:28,440 :: INFO :: succeed in opening this site:https://www.fioulmarket.fr/
+2018-07-10 17:32:32,134 :: INFO :: Message: 
+
+2018-07-10 17:32:32,134 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:76200 
+2018-07-10 17:32:38,105 :: INFO :: Message: 
+
+2018-07-10 17:32:38,105 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:80350 
+2018-07-10 17:32:42,336 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:76290
+ prix:1175 
+2018-07-10 17:32:44,037 :: INFO :: Message: 
+
+2018-07-10 17:32:44,037 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:81100 
+2018-07-10 17:32:49,875 :: INFO :: Message: 
+
+2018-07-10 17:32:49,875 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:02500 
+2018-07-10 17:32:54,286 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:16000
+ prix:987 
+2018-07-10 17:33:02,166 :: INFO :: Message: 
+
+2018-07-10 17:33:02,166 :: INFO :: site: https://www.fioulmarket.fr/ 
+ info:The fioul type lable doesn't appear 
+ code postal:33150 
+2018-07-10 17:33:10,825 :: INFO :: try/retry to open the site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:33:13,730 :: INFO :: succeed in opening this site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:33:15,766 :: INFO :: Message: 
+
+2018-07-10 17:33:15,766 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info:The site's pub doesn't appear76290 
+2018-07-10 17:33:17,845 :: INFO :: Message: 
+
+2018-07-10 17:33:17,845 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info: The cookie request doesn't appear 
+ code postal:76290 
+2018-07-10 17:33:18,666 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/
+info:the first collection finished in this site code postal:76290
+ prix:906 
+2018-07-10 17:33:21,457 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:33150 
+ prix: 898 
+2018-07-10 17:33:29,765 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:33270 
+ prix: 898 
+2018-07-10 17:33:38,045 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:24000 
+ prix: 924 
+2018-07-10 17:33:46,351 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:62200 
+ prix: 904 
+2018-07-10 17:33:55,921 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59140 
+ prix: 904 
+2018-07-10 17:34:05,700 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:62500 
+ prix: 904 
+2018-07-10 17:34:15,505 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:69300 
+ prix: 898 
+2018-07-10 17:34:25,412 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:69130 
+ prix: 898 
+2018-07-10 17:34:35,257 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:71000 
+ prix: 908 
+2018-07-10 17:34:45,004 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:69230 
+ prix: 898 
+2018-07-10 17:34:53,264 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:91220 
+ prix: 887 
+2018-07-10 17:35:01,056 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:95000 
+ prix: 889 
+2018-07-10 17:35:09,307 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:92260 
+ prix: 889 
+2018-07-10 17:35:17,354 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:78200 
+ prix: 889 
+2018-07-10 17:35:25,710 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:78310 
+ prix: 884 
+2018-07-10 17:35:33,592 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:77000 
+ prix: 889 
+2018-07-10 17:35:41,878 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:91230 
+ prix: 887 
+2018-07-10 17:35:50,167 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:93330 
+ prix: 889 
+2018-07-10 17:35:58,419 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:95520 
+ prix: 889 
+2018-07-10 17:36:07,738 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:78370 
+ prix: 884 
+2018-07-10 17:36:16,041 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:95230 
+ prix: 889 
+2018-07-10 17:36:24,335 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:95150 
+ prix: 889 
+2018-07-10 17:36:32,608 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:77100 
+ prix: 889 
+2018-07-10 17:36:40,914 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:78140 
+ prix: 884 
+2018-07-10 17:36:48,818 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:91140 
+ prix: 884 
+2018-07-10 17:36:59,057 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:13400 
+ prix: 888 
+2018-07-10 17:37:07,434 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:84300 
+ prix: 891 
+2018-07-10 17:37:15,716 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:84130 
+ prix: 891 
+2018-07-10 17:37:24,009 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:84000 
+ prix: 891 
+2018-07-10 17:37:31,752 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:72000 
+ prix: 889 
+2018-07-10 17:37:40,563 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:74000 
+ prix: 898 
+2018-07-10 17:37:48,335 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:37170 
+ prix: 895 
+2018-07-10 17:37:56,197 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:37540 
+ prix: 895 
+2018-07-10 17:38:04,488 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:37000 
+ prix: 895 
+2018-07-10 17:38:12,760 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:62000 
+ prix: 904 
+2018-07-10 17:38:20,550 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:62400 
+ prix: 904 
+2018-07-10 17:38:28,834 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59500 
+ prix: 904 
+2018-07-10 17:38:37,077 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59320 
+ prix: 904 
+2018-07-10 17:38:45,343 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59220 
+ prix: 904 
+2018-07-10 17:38:54,990 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59115 
+ prix: 904 
+2018-07-10 17:39:03,282 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:62950 
+ prix: 904 
+2018-07-10 17:39:11,657 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59223 
+ prix: 904 
+2018-07-10 17:39:20,443 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59650 
+ prix: 904 
+2018-07-10 17:39:28,687 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59300 
+ prix: 904 
+2018-07-10 17:39:36,958 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59400 
+ prix: 904 
+2018-07-10 17:39:45,225 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59720 
+ prix: 904 
+2018-07-10 17:39:54,021 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:02300 
+ prix: 899 
+2018-07-10 17:40:02,392 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:02100 
+ prix: 899 
+2018-07-10 17:40:10,220 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:06400 
+ prix: 909 
+2018-07-10 17:40:18,514 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:26000 
+ prix: 882 
+2018-07-10 17:40:26,822 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:41000 
+ prix: 895 
+2018-07-10 17:40:34,684 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:45160 
+ prix: 901 
+2018-07-10 17:40:43,006 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:45140 
+ prix: 901 
+2018-07-10 17:40:51,331 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:59000 
+ prix: 904 
+2018-07-10 17:41:00,127 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:76000 
+ prix: 906 
+2018-07-10 17:41:08,385 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:69330 
+ prix: 898 
+2018-07-10 17:41:17,983 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal:62100
+ 
+ prix: 904 
+2018-07-10 17:41:24,288 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info:one end of the cycle 
+
+2018-07-10 17:41:24,288 :: INFO :: site:http://www.carrefour.fr/services/fioul-domestique/ 
+ info:going to insert date into prix table 
+2018-07-10 17:41:24,352 :: INFO :: site:http://www.carrefour.fr/services/fioul-domestique/ 
+ info:succeed in inserting the data into the price table 
+2018-07-10 17:41:24,353 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info:end of the collection of price, collection succeed 
+
+2018-07-10 17:41:24,353 :: INFO :: lance the thread succeed
+2018-07-10 17:41:24,353 :: INFO :: begin to lance the thread
+2018-07-10 17:41:24,358 :: INFO :: Begin to collect the price from https://www.fioulmarket.fr/
+2018-07-10 17:41:24,359 :: INFO :: site:https://www.fioulmarket.fr/ 
+ code postal obligatoire:[(4, '76290'), (5, '16000'), (6, '33150'), (7, '33270'), (8, '16100'), (9, '24000'), (10, '62200'), (11, '59140'), (12, '62500'), (13, '69300'), (14, '69130'), (15, '71000'), (16, '69230'), (21, '91220'), (22, '95000'), (23, '92260'), (24, '78200'), (25, '78310'), (26, '77000'), (27, '91230'), (28, '93330'), (29, '95520'), (30, '78370'), (31, '95230'), (32, '95150'), (33, '77100'), (34, '78140'), (35, '91140'), (36, '13400'), (37, '76200'), (38, '80350'), (39, '84300'), (40, '84130'), (41, '84000'), (42, '72000'), (43, '74000'), (44, '81100'), (45, '37170'), (46, '37540'), (47, '37000'), (48, '62000'), (49, '62400'), (50, '59500'), (51, '59320'), (52, '59220'), (53, '59115'), (54, '62950'), (55, '59223'), (56, '59650'), (58, '59300'), (59, '59400'), (61, '59720'), (63, '02300'), (62, '02100'), (60, '02500'), (1, '06400'), (2, '26000'), (18, '41000'), (19, '45160'), (20, '45140'), (57, '59000'), (3, '76000'), (17, '69330')] 
+ code postal essay:[(64, '62100\r\n')]
+2018-07-10 17:41:24,360 :: INFO :: Begin to collect the price from http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:41:24,360 :: INFO :: site:http://www.carrefour.fr/services/fioul-domestique/ 
+ code postal obligatoire:[] 
+ code postal essay:[(5, '16000'), (8, '16100'), (37, '76200'), (38, '80350'), (44, '81100'), (60, '02500')]
+2018-07-10 17:41:24,369 :: INFO :: Begin to collect the price from https://www.fioulreduc.com/
+2018-07-10 17:41:24,370 :: INFO :: site:https://www.fioulreduc.com/ 
+ code postal obligatoire:[] 
+ code postal essay:[(63, '02300')]
+2018-07-10 17:41:49,805 :: INFO :: try/retry to open the site:https://www.fioulreduc.com/
+2018-07-10 17:41:51,619 :: INFO :: try/retry to open the site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:41:51,958 :: INFO :: try/retry to open the site:https://www.fioulmarket.fr/
+2018-07-10 17:41:55,740 :: INFO :: succeed in opening this site:https://www.fioulmarket.fr/
+2018-07-10 17:41:58,398 :: INFO :: succeed in opening this site:http://www.carrefour.fr/services/fioul-domestique/
+2018-07-10 17:42:00,676 :: INFO :: Message: 
+
+2018-07-10 17:42:00,676 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info:The site's pub doesn't appear16000 
+2018-07-10 17:42:02,790 :: INFO :: Message: 
+
+2018-07-10 17:42:02,790 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ info: The cookie request doesn't appear 
+ code postal:16000 
+2018-07-10 17:42:03,544 :: INFO :: succeed in opening this site:https://www.fioulreduc.com/
+2018-07-10 17:42:08,172 :: INFO :: Message: 
+
+2018-07-10 17:42:08,172 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error: can't load price element 
+ code postal:16000 
+2018-07-10 17:42:09,271 :: WARNING :: site: https://www.fioulreduc.com/ 
+ info: can't locate the options of livraison.possibility:
+ 1.the site don't supply for this code postal 
+ 2.the site don't allow chose the type of livraison temporary
+ code postal:02300 
+2018-07-10 17:42:09,274 :: INFO :: site: https://www.fioulreduc.com/ 
+ info: try to locate close button 
+ code postal:02300 
+2018-07-10 17:42:09,288 :: INFO :: located the close button
+2018-07-10 17:42:09,544 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:the site don't supply for this code postal temporary 
+ code postal:02300 
+2018-07-10 17:42:13,257 :: ERROR :: Message: 
+
+2018-07-10 17:42:13,257 :: ERROR :: site: https://www.fioulmarket.fr/ 
+ error: can't load livraison element 
+ code postal:62100
+ 
+2018-07-10 17:42:14,076 :: INFO :: Message: 
+
+2018-07-10 17:42:14,076 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:16100 
+2018-07-10 17:42:21,579 :: INFO :: Message: 
+
+2018-07-10 17:42:21,579 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:76200 
+2018-07-10 17:42:27,442 :: INFO :: Message: 
+
+2018-07-10 17:42:27,442 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:80350 
+2018-07-10 17:42:27,699 :: INFO :: try/retry to open the site:https://www.fioulreduc.com/
+2018-07-10 17:42:31,458 :: INFO :: succeed in opening this site:https://www.fioulreduc.com/
+2018-07-10 17:42:32,311 :: INFO :: try/retry to open the site:https://www.fioulmarket.fr/
+2018-07-10 17:42:33,326 :: INFO :: Message: 
+
+2018-07-10 17:42:33,326 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:81100 
+2018-07-10 17:42:34,235 :: INFO :: succeed in opening this site:https://www.fioulmarket.fr/
+2018-07-10 17:42:34,393 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:one end of the cycle 
+
+2018-07-10 17:42:34,394 :: INFO :: site: https://www.fioulreduc.com/ 
+ info:end of the collection of price, collection succeed 
+
+2018-07-10 17:42:39,326 :: INFO :: Message: 
+
+2018-07-10 17:42:39,326 :: INFO :: site: http://www.carrefour.fr/services/fioul-domestique/ 
+ error can't load price element 
+ code postal:02500 
+2018-07-10 17:42:45,633 :: INFO :: site: https://www.fioulmarket.fr/
+ code postal:76290
+ prix:934 

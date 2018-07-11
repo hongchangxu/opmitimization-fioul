@@ -1264,163 +1264,166 @@ def recuperation_reduc_falloir(website, codepostals):
             if (except_time == 4):
                 logger.warning("After several times try, failed open the site:" + website[1])
                 exit()
-
-        for cp in codepostals:
-            fioul_type = 'standard'
-            if time_out():
-                logger.warning("site:%s \n info:time out, it going to stop the programme" + website[1])
-                time_out_signal = True
-                break
-            codepostal = cp
-            cp = cp[1]
-            except_signal = False
-            livraison = False
-            try:
-                elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located((By.NAME, FIOUL_REDUC_CP_INPUT)))
-            except Exception as e:
-                logger.error(e)
-                logger.error("site: %s \n error: can't load code postal input element \n code postal:%s ", website[1],cp)
-                except_signal = True
-            if (except_signal):
-                browser.refresh()
-                continue
-            elem.clear()
-            sleep(0.1)
-            elem.send_keys(cp)
-            try:
-                elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located((By.NAME, FIOUL_REDUC_QUANTITE)))
-            except Exception as e:
-                logger.error(e)
-                logger.error("site: %s \n error: can't load quantity input element \n code postal:%s ", website[1], cp)
-                except_signal = True
-            if (except_signal):
-                browser.refresh()
-                continue
-            elem.clear()
-            sleep(0.1)
-            elem.send_keys(quantite)
-            try:
-                elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located((By.NAME, FIOUL_REDUC_EMAIL)))
-            except Exception as e:
-                logger.error(e)
-                logger.error("site: %s \n error: can't load email input element \n code postal:%s ", website[1], cp)
-                except_signal = True
-            if (except_signal):
-                browser.refresh()
-                continue
-            elem.clear()
-            sleep(0.1)
-            elem.send_keys(email)
-            try:
-                elem = WebDriverWait(browser, 5, 0.5).until(
-                    EC.presence_of_element_located((By.ID, FIOUL_REDUC_BUTTON)))
-            except Exception as e:
-                logger.error(e)
-                logger.error("site: %s \n error: can't load click button element \n code postal:%s ", website[1], cp)
-                except_signal = True
-            if (except_signal):
-                browser.refresh()
-                continue
-            try:
-                elem.click()
-            except Exception as e:
-                logger.error(e)
-                logger.error("site: %s \n error: can't click the button,may be il was block by other element \n code postal:%s ",
-                    website[1], cp)
-                except_signal = True
-            if (except_signal):
-                browser.refresh()
-                continue
-            try:
-                elem = WebDriverWait(browser, 5, 0.5).until(
-                    EC.presence_of_element_located(
-                        (By.XPATH, FIOUL_REDUC_LIVRAISON_RAPIDE)))
-                cps_commentaire.append('')
-                elem.click()
-            except Exception as e:
-                logger.warning(
-                    "site: %s \n info: can't locate the options of livraison.possibility:\n 1.the site don't supply for this code postal \n 2.the site don't allow chose the type of livraison temporary\n code postal:%s ",
-                    website[1], cp)
+        try:
+            for cp in codepostals:
+                fioul_type = 'standard'
+                if time_out():
+                    logger.warning("site:%s \n info:time out, it going to stop the programme" + website[1])
+                    time_out_signal = True
+                    break
+                codepostal = cp
+                cp = cp[1]
+                except_signal = False
+                livraison = False
                 try:
-                    logger.info(
-                        "site: %s \n info: try to locate close button \n code postal:%s ",
-                        website[1], cp)
-                    elem = browser.find_element_by_xpath('/html/body/div[3]/div[1]/button')
-                    logger.info("located the close button")
+                    elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located((By.NAME, FIOUL_REDUC_CP_INPUT)))
                 except Exception as e:
-                    logger.info(e)
-                    logger.info(
-                        "site: %s \n info:the site don't allow chose the type of livraison temporary \n code postal:%s ",
-                        website[1], cp)
-                    livraison = True
-                if livraison:
-                    elem = browser.find_element_by_xpath('//*[@id="order-block-delivery"]/div[1]/div[2]/div/p[1]')
-                    cps_commentaire.append(elem.text)
-                else:
-                    elem.click()
-                    logger.info(
-                        "site: %s \n info:the site don't supply for this code postal temporary \n code postal:%s ",
-                        website[1], cp)
+                    logger.error(e)
+                    logger.error("site: %s \n error: can't load code postal input element \n code postal:%s ", website[1],cp)
+                    except_signal = True
+                if (except_signal):
+                    browser.refresh()
                     continue
+                elem.clear()
+                sleep(0.1)
+                elem.send_keys(cp)
+                try:
+                    elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located((By.NAME, FIOUL_REDUC_QUANTITE)))
+                except Exception as e:
+                    logger.error(e)
+                    logger.error("site: %s \n error: can't load quantity input element \n code postal:%s ", website[1], cp)
+                    except_signal = True
+                if (except_signal):
+                    browser.refresh()
+                    continue
+                elem.clear()
+                sleep(0.1)
+                elem.send_keys(quantite)
+                try:
+                    elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located((By.NAME, FIOUL_REDUC_EMAIL)))
+                except Exception as e:
+                    logger.error(e)
+                    logger.error("site: %s \n error: can't load email input element \n code postal:%s ", website[1], cp)
+                    except_signal = True
+                if (except_signal):
+                    browser.refresh()
+                    continue
+                elem.clear()
+                sleep(0.1)
+                elem.send_keys(email)
+                try:
+                    elem = WebDriverWait(browser, 5, 0.5).until(
+                        EC.presence_of_element_located((By.ID, FIOUL_REDUC_BUTTON)))
+                except Exception as e:
+                    logger.error(e)
+                    logger.error("site: %s \n error: can't load click button element \n code postal:%s ", website[1], cp)
+                    except_signal = True
+                if (except_signal):
+                    browser.refresh()
+                    continue
+                try:
+                    elem.click()
+                except Exception as e:
+                    logger.error(e)
+                    logger.error("site: %s \n error: can't click the button,may be il was block by other element \n code postal:%s ",
+                        website[1], cp)
+                    except_signal = True
+                if (except_signal):
+                    browser.refresh()
+                    continue
+                try:
+                    elem = WebDriverWait(browser, 5, 0.5).until(
+                        EC.presence_of_element_located(
+                            (By.XPATH, FIOUL_REDUC_LIVRAISON_RAPIDE)))
+                    cps_commentaire.append('')
+                    elem.click()
+                except Exception as e:
+                    logger.warning(
+                        "site: %s \n info: can't locate the options of livraison.possibility:\n 1.the site don't supply for this code postal \n 2.the site don't allow chose the type of livraison temporary\n code postal:%s ",
+                        website[1], cp)
+                    try:
+                        logger.info(
+                            "site: %s \n info: try to locate close button \n code postal:%s ",
+                            website[1], cp)
+                        elem = browser.find_element_by_xpath('/html/body/div[3]/div[1]/button')
+                        logger.info("located the close button")
+                    except Exception as e:
+                        logger.info(e)
+                        logger.info(
+                            "site: %s \n info:the site don't allow chose the type of livraison temporary \n code postal:%s ",
+                            website[1], cp)
+                        livraison = True
+                    if livraison:
+                        elem = browser.find_element_by_xpath('//*[@id="order-block-delivery"]/div[1]/div[2]/div/p[1]')
+                        cps_commentaire.append(elem.text)
+                    else:
+                        elem.click()
+                        logger.info(
+                            "site: %s \n info:the site don't supply for this code postal temporary \n code postal:%s ",
+                            website[1], cp)
+                        continue
 
-            try:
-                elem = WebDriverWait(browser, 5, 0.5).until(
-                    EC.presence_of_element_located(
-                        (By.XPATH, FIOUL_REDUC_TYPE_ORDINAIRE)))
-            except Exception as e:
-                logger.error(e)
-                logger.error("site: %s \n error:can't locate the fioul type element \n code postal:%s ",
-                             website[1], cp)
-                browser.back()
-                except_signal = True
+                try:
+                    elem = WebDriverWait(browser, 5, 0.5).until(
+                        EC.presence_of_element_located(
+                            (By.XPATH, FIOUL_REDUC_TYPE_ORDINAIRE)))
+                except Exception as e:
+                    logger.error(e)
+                    logger.error("site: %s \n error:can't locate the fioul type element \n code postal:%s ",
+                                 website[1], cp)
+                    browser.back()
+                    except_signal = True
 
-            if (except_signal):
-                continue
-            if 'active' in elem.get_attribute('class'):
-                pass
-            else:
-                elem.click()
-                sleep(2)
-                elem = browser.find_element_by_xpath(FIOUL_REDUC_TYPE_ORDINAIRE)
+                if (except_signal):
+                    continue
                 if 'active' in elem.get_attribute('class'):
                     pass
                 else:
-                    fioul_type = 'superieur'
-            try:
-                elem = WebDriverWait(browser, 5, 0.5).until(
-                    EC.presence_of_element_located((By.ID, FIOUL_REDUC_PRIX)))
-            except Exception as e:
-                logger.error(e)
-                logger.error("site: %s \n error:can't locate the price element \n code postal:%s ",
-                             website[1], cp)
-                except_signal = True
-            if (except_signal):
-                browser.back()
-                continue
-            sleep(1.5)
-            prix = elem.text
-            if prix == '':
-                sleep(2)
+                    elem.click()
+                    sleep(2)
+                    elem = browser.find_element_by_xpath(FIOUL_REDUC_TYPE_ORDINAIRE)
+                    if 'active' in elem.get_attribute('class'):
+                        pass
+                    else:
+                        fioul_type = 'superieur'
+                try:
+                    elem = WebDriverWait(browser, 5, 0.5).until(
+                        EC.presence_of_element_located((By.ID, FIOUL_REDUC_PRIX)))
+                except Exception as e:
+                    logger.error(e)
+                    logger.error("site: %s \n error:can't locate the price element \n code postal:%s ",
+                                 website[1], cp)
+                    except_signal = True
+                if (except_signal):
+                    browser.back()
+                    continue
+                sleep(1.5)
                 prix = elem.text
                 if prix == '':
                     sleep(2)
                     prix = elem.text
                     if prix == '':
-                        logger.error("site: %s \n the price element don't contain the price \n code postal:%s ",
-                                     website[1], cp)
-                        browser.back()
-                        continue
-            prix = extractPriceForSite(prix)
-            bon_cps.append(codepostal)
-            cps_prix_reel.append(prix)
-            cps_prix_original.append(prix)
-            cps_type.append(fioul_type)
-            cps_date.append(time.strftime("%Y-%m-%d", time.localtime()))
-            logger.info("site: %s \n info:succeed in collecting the price  \n code postal:%s \n price:%s",
-                        website[1], cp, prix)
-            browser.back()
-        browser.quit()
-        logger.info("site: %s \n info:one end of the cycle \n",website[1])
+                        sleep(2)
+                        prix = elem.text
+                        if prix == '':
+                            logger.error("site: %s \n the price element don't contain the price \n code postal:%s ",
+                                         website[1], cp)
+                            browser.back()
+                            continue
+                prix = extractPriceForSite(prix)
+                bon_cps.append(codepostal)
+                cps_prix_reel.append(prix)
+                cps_prix_original.append(prix)
+                cps_type.append(fioul_type)
+                cps_date.append(time.strftime("%Y-%m-%d", time.localtime()))
+                logger.info("site: %s \n info:succeed in collecting the price  \n code postal:%s \n price:%s",
+                            website[1], cp, prix)
+                browser.back()
+            browser.quit()
+            logger.info("site: %s \n info:one end of the cycle \n",website[1])
+        except Exception as e:
+            logger.error(e)
+            logger.error("There is a problem during the process for reduc")
         if len(bon_cps) != 0:
             succeed_length = succeed_length + len(bon_cps)
             codepostals = list(set(codepostals)-set(bon_cps))
@@ -1469,123 +1472,127 @@ def recuperation_market_essayer(website, codepostals):
             logger.warning("After several times try, failed open the site:" + website[1])
             exit()
 
-
-    for cp in codepostals:
-        fioul_type = 'standard'
-        codepostal = cp
-        cp = cp[1]
-        except_signal = False
-        try:
-            elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located(
-                (By.XPATH, "//input[@class='js-PostalCode-input main-postal-code']")))
-        except Exception as e:
-            logger.info(e)
-            logger.info("site: %s \n info:can't load the code postal element %s ", website[1], cp)
-            except_signal = True
-        if (except_signal):
-            continue
-        elem.clear()
-        elem.send_keys(cp)
-        try:
-            elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located(
-                (By.XPATH, '//form[@class="form-command-fioul decli2 js-PostalCode-form"]/div[2]/button')))
-        except Exception as e:
-            logger.info(e)
-            logger.info("site: %s \n info:The button doesn't appear \n code postal:%s ", website[1], cp)
-            except_signal = True
-        if (except_signal):
-            continue
-        elem.click()
-        try:
-            elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located(
-                (By.XPATH, "//*[@id='main']/div[1]/div/aside/div/div[1]/div[1]/div/div[2]/div[2]/span[2]/span")))
-        except Exception as e:
-            logger.info(e)
-            logger.info("site: %s \n info:The fioul type lable doesn't appear \n code postal:%s ", website[1], cp)
-
-        if(len(elem.text)):
-            pass
-        else:
-            sleep(2)
-        if 'ordinaire' in elem.text:
-            pass
-        else:
+    try:
+        for cp in codepostals:
+            fioul_type = 'standard'
+            codepostal = cp
+            cp = cp[1]
+            except_signal = False
             try:
                 elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located(
-                    (By.XPATH, "//form[@id = 'tunnel-step-one']/div[2]/p[2]/label")))
-                elem.click()
-                sleep(2)
-                temps_type = browser.find_element_by_xpath("//*[@id='main']/div[1]/div/aside/div/div[1]/div[1]/div/div[2]/div[2]/span[2]/span")
-                if 'ordinaire' in temps_type.text:
-                    pass
-                else:
-                    fioul_type = 'superieur'
+                    (By.XPATH, "//input[@class='js-PostalCode-input main-postal-code']")))
             except Exception as e:
-                logger.error(e)
-                logger.error("site: %s \n info:The fioul standard lable doesn't appear \n code postal:%s ", website[1],cp)
+                logger.info(e)
+                logger.info("site: %s \n info:can't load the code postal element %s ", website[1], cp)
                 except_signal = True
-            if except_signal:
+            if (except_signal):
                 continue
-
-        try:
-            elem = WebDriverWait(browser, 5, 0.5).until(
-                EC.presence_of_element_located((By.XPATH, FIOUL_MARKET_LIVRAISON)))
+            elem.clear()
+            elem.send_keys(cp)
+            try:
+                elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located(
+                    (By.XPATH, '//form[@class="form-command-fioul decli2 js-PostalCode-form"]/div[2]/button')))
+            except Exception as e:
+                logger.info(e)
+                logger.info("site: %s \n info:The button doesn't appear \n code postal:%s ", website[1], cp)
+                except_signal = True
+            if (except_signal):
+                continue
             elem.click()
-        except Exception as e:
+            try:
+                elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located(
+                    (By.XPATH, "//*[@id='main']/div[1]/div/aside/div/div[1]/div[1]/div/div[2]/div[2]/span[2]/span")))
+            except Exception as e:
+                logger.info(e)
+                logger.info("site: %s \n info:The fioul type lable doesn't appear \n code postal:%s ", website[1], cp)
+
+            if(len(elem.text)):
+                pass
+            else:
+                sleep(2)
+            if 'ordinaire' in elem.text:
+                pass
+            else:
+                try:
+                    elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located(
+                        (By.XPATH, "//form[@id = 'tunnel-step-one']/div[2]/p[2]/label")))
+                    elem.click()
+                    sleep(2)
+                    temps_type = browser.find_element_by_xpath("//*[@id='main']/div[1]/div/aside/div/div[1]/div[1]/div/div[2]/div[2]/span[2]/span")
+                    if 'ordinaire' in temps_type.text:
+                        pass
+                    else:
+                        fioul_type = 'superieur'
+                except Exception as e:
+                    logger.error(e)
+                    logger.error("site: %s \n info:The fioul standard lable doesn't appear \n code postal:%s ", website[1],cp)
+                    except_signal = True
+                if except_signal:
+                    continue
+
             try:
                 elem = WebDriverWait(browser, 5, 0.5).until(
-                    EC.presence_of_element_located((By.ID, 'title-for-commune')))
+                    EC.presence_of_element_located((By.XPATH, FIOUL_MARKET_LIVRAISON)))
+                elem.click()
+            except Exception as e:
+                try:
+                    elem = WebDriverWait(browser, 5, 0.5).until(
+                        EC.presence_of_element_located((By.ID, 'title-for-commune')))
+                except Exception as e:
+                    logger.error(e)
+                    logger.error("site: %s \n error: can't load livraison element \n code postal:%s ", website[1], cp)
+                    except_signal = True
+
+            if (except_signal):
+                continue
+            try:
+                elem = WebDriverWait(browser, 5, 0.5).until(
+                    EC.presence_of_element_located((By.NAME, FIOUL_MARKET_QUANTITE)))
+                elem.clear()
+                elem.send_keys('1000')
+                sleep(5)
             except Exception as e:
                 logger.error(e)
-                logger.error("site: %s \n error: can't load livraison element \n code postal:%s ", website[1], cp)
+                logger.error("site: %s \n error: can't load quantity element \n code postal:%s ", website[1], cp)
                 except_signal = True
-
-        if (except_signal):
-            continue
-        try:
-            elem = WebDriverWait(browser, 5, 0.5).until(
-                EC.presence_of_element_located((By.NAME, FIOUL_MARKET_QUANTITE)))
-            elem.clear()
-            elem.send_keys('1000')
-            sleep(5)
-        except Exception as e:
-            logger.error(e)
-            logger.error("site: %s \n error: can't load quantity element \n code postal:%s ", website[1], cp)
-            except_signal = True
-        if (except_signal):
-            continue
-        try:
-            elem = WebDriverWait(browser, 5, 0.5).until(
-                EC.presence_of_element_located((By.XPATH, FIOUL_MARKET_PRIX)))
-        except Exception as e:
-            logger.error(e)
-            logger.error("site: %s \n error: can't load prix element \n code postal:%s ", website[1], cp)
-            except_signal = True
-        if (except_signal):
-            continue
-        prix = elem.text
-        if prix =='':
-            sleep(2)
+            if (except_signal):
+                continue
+            try:
+                elem = WebDriverWait(browser, 5, 0.5).until(
+                    EC.presence_of_element_located((By.XPATH, FIOUL_MARKET_PRIX)))
+            except Exception as e:
+                logger.error(e)
+                logger.error("site: %s \n error: can't load prix element \n code postal:%s ", website[1], cp)
+                except_signal = True
+            if (except_signal):
+                continue
             prix = elem.text
             if prix =='':
                 sleep(2)
                 prix = elem.text
-                if prix == '':
-                    logger.error("site: %s \n the price element don't contain the price \n code postal:%s ",
-                                website[1], cp)
-                    browser.back()
-                    continue
-        prix = extractPriceForSite(prix)
-        prix = str(int(prix))
-        bon_cps.append(codepostal)
-        cps_prix_reel.append(prix)
-        cps_prix_original.append(prix)
-        cps_type.append(fioul_type)
-        cps_date.append(time.strftime("%Y-%m-%d", time.localtime()))
-        commentaire.append('')
-        logger.info("site: %s\ncode postal:%s\n prix:%s ", website[1], cp, prix)
-        browser.back()
-    browser.quit()
+                if prix =='':
+                    sleep(2)
+                    prix = elem.text
+                    if prix == '':
+                        logger.error("site: %s \n the price element don't contain the price \n code postal:%s ",
+                                    website[1], cp)
+                        browser.back()
+                        continue
+            prix = extractPriceForSite(prix)
+            prix = str(int(prix))
+            bon_cps.append(codepostal)
+            cps_prix_reel.append(prix)
+            cps_prix_original.append(prix)
+            cps_type.append(fioul_type)
+            cps_date.append(time.strftime("%Y-%m-%d", time.localtime()))
+            commentaire.append('')
+            logger.info("site: %s\ncode postal:%s\n prix:%s ", website[1], cp, prix)
+            browser.back()
+        browser.quit()
+    except Exception as e:
+        logger.error(e)
+        logger.error("There is a problem during the process for market")
+
     if len(bon_cps)!=0:
         ajouter_nouveaux_cps_dans_site(website, bon_cps)
         add_prix(website, bon_cps, cps_prix_reel, cps_prix_original, cps_date, cps_type)
@@ -1612,7 +1619,7 @@ def recuperation_market_falloir(website, codepostals):
         if time_out_signal:
             break
         firefox_options = Options()
-        # firefox_options.add_argument("--headless")
+        firefox_options.add_argument("--headless")
         browser = webdriver.Firefox(executable_path=DRIVER_EXECUTABLE_PATH,
                                     firefox_options=firefox_options, firefox_profile=FIREFOX_PROFILE)
         except_time = 0
@@ -1635,136 +1642,139 @@ def recuperation_market_falloir(website, codepostals):
             if (except_time == 4):
                 logger.warning("After several times try, failed open the site:" + website[1])
                 exit()
-
-        for cp in codepostals:
-            fioul_type = 'standard'
-            if time_out():
-                logger.warning("site:%s \n info:time out, it going to stop the programme" + website[1])
-                time_out_signal = True
-                break
-            codepostal = cp
-            cp = cp[1]
-            except_signal = False
-            commune_signal = False
-            try:
-                elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located(
-                    (By.XPATH, FIOUL_MARKET_CP_INPUT)))
-            except Exception as e:
-                logger.info(e)
-                logger.info("site: %s \n info:can't load the code postal element%s ", website[1], cp)
-                except_signal = True
-            if (except_signal):
-                continue
-            elem.clear()
-            elem.send_keys(cp)
-            try:
-                elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located(
-                    (By.XPATH, FIOUL_MARKET_BUTTON)))
-            except Exception as e:
-                logger.info(e)
-                logger.info("site: %s \n info:The button doesn't appear \n code postal:%s ", website[1], cp)
-                except_signal = True
-            if (except_signal):
-                continue
-            elem.click()
-            try:
-                elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located(
-                    (By.XPATH,
-                     FIOUL_MARKET_FIOUL_TYPE)))
-
-            except Exception as e:
-                logger.info(e)
-                logger.info("site: %s \n info:The fioul type lable doesn't appear \n code postal:%s ", website[1], cp)
-            if (len(elem.text)):
-                pass
-            else:
-                sleep(2)
-            if 'ordinaire' in elem.text:
-                pass
-            else:
+        try:
+            for cp in codepostals:
+                fioul_type = 'standard'
+                if time_out():
+                    logger.warning("site:%s \n info:time out, it going to stop the programme" + website[1])
+                    time_out_signal = True
+                    break
+                codepostal = cp
+                cp = cp[1]
+                except_signal = False
+                commune_signal = False
                 try:
                     elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located(
-                        (By.XPATH, FIOUL_MARKET_FIOUL_ORDINAIRE)))
-                    elem.click()
-                    sleep(2)
-                    temps_type = browser.find_element_by_xpath(
-                        FIOUL_MARKET_FIOUL_TYPE)
-                    if 'ordinaire' in temps_type.text:
-                        pass
-                    else:
-                        fioul_type = 'superieur'
+                        (By.XPATH, FIOUL_MARKET_CP_INPUT)))
                 except Exception as e:
-                    logger.error(e)
-                    logger.error("site: %s \n info:The fioul standard lable doesn't appear \n code postal:%s ",
-                                 website[1], cp)
+                    logger.info(e)
+                    logger.info("site: %s \n info:can't load the code postal element%s ", website[1], cp)
                     except_signal = True
-                if except_signal:
+                if (except_signal):
                     continue
-            try:
-                elem = WebDriverWait(browser, 5, 0.5).until(
-                    EC.presence_of_element_located((By.XPATH, '//*[@id="content-delivery-range"]/table/tbody/tr[2]/td[2]')))
+                elem.clear()
+                elem.send_keys(cp)
+                try:
+                    elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located(
+                        (By.XPATH, FIOUL_MARKET_BUTTON)))
+                except Exception as e:
+                    logger.info(e)
+                    logger.info("site: %s \n info:The button doesn't appear \n code postal:%s ", website[1], cp)
+                    except_signal = True
+                if (except_signal):
+                    continue
                 elem.click()
-            except Exception as e:
+                try:
+                    elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located(
+                        (By.XPATH,
+                         FIOUL_MARKET_FIOUL_TYPE)))
+
+                except Exception as e:
+                    logger.info(e)
+                    logger.info("site: %s \n info:The fioul type lable doesn't appear \n code postal:%s ", website[1], cp)
+                if (len(elem.text)):
+                    pass
+                else:
+                    sleep(2)
+                if 'ordinaire' in elem.text:
+                    pass
+                else:
+                    try:
+                        elem = WebDriverWait(browser, 5, 0.5).until(EC.presence_of_element_located(
+                            (By.XPATH, FIOUL_MARKET_FIOUL_ORDINAIRE)))
+                        elem.click()
+                        sleep(2)
+                        temps_type = browser.find_element_by_xpath(
+                            FIOUL_MARKET_FIOUL_TYPE)
+                        if 'ordinaire' in temps_type.text:
+                            pass
+                        else:
+                            fioul_type = 'superieur'
+                    except Exception as e:
+                        logger.error(e)
+                        logger.error("site: %s \n info:The fioul standard lable doesn't appear \n code postal:%s ",
+                                     website[1], cp)
+                        except_signal = True
+                    if except_signal:
+                        continue
                 try:
                     elem = WebDriverWait(browser, 5, 0.5).until(
-                    EC.presence_of_element_located((By.ID, 'title-for-commune')))
-                    commune_signal = True
+                        EC.presence_of_element_located((By.XPATH, '//*[@id="content-delivery-range"]/table/tbody/tr[2]/td[2]')))
+                    elem.click()
+                except Exception as e:
+                    try:
+                        elem = WebDriverWait(browser, 5, 0.5).until(
+                        EC.presence_of_element_located((By.ID, 'title-for-commune')))
+                        commune_signal = True
+                    except Exception as e:
+                        logger.error(e)
+                        logger.error("site: %s \n error: can't load livraison element \n code postal:%s ", website[1], cp)
+                        except_signal = True
+
+                if (except_signal):
+                    continue
+                try:
+                    elem = WebDriverWait(browser, 5, 0.5).until(
+                        EC.presence_of_element_located((By.NAME, 'form[volume]')))
+                    elem.clear()
+                    elem.send_keys('1000')
+                    sleep(8)
                 except Exception as e:
                     logger.error(e)
-                    logger.error("site: %s \n error: can't load livraison element \n code postal:%s ", website[1], cp)
+                    logger.error("site: %s \n error: can't load quantity element \n code postal:%s ", website[1], cp)
                     except_signal = True
-
-            if (except_signal):
-                continue
-            try:
-                elem = WebDriverWait(browser, 5, 0.5).until(
-                    EC.presence_of_element_located((By.NAME, 'form[volume]')))
-                elem.clear()
-                elem.send_keys('1000')
-                sleep(8)
-            except Exception as e:
-                logger.error(e)
-                logger.error("site: %s \n error: can't load quantity element \n code postal:%s ", website[1], cp)
-                except_signal = True
-            if (except_signal):
-                continue
-            try:
-                elem = WebDriverWait(browser, 5, 0.5).until(
-                    EC.presence_of_element_located((By.XPATH, FIOUL_MARKET_PRIX)))
-            except Exception as e:
-                logger.error(e)
-                logger.error("site: %s \n error: can't load prix element \n code postal:%s ", website[1], cp)
-                except_signal = True
-            if (except_signal):
-                continue
-            prix = elem.text
-            if prix == '':
-                sleep(2)
+                if (except_signal):
+                    continue
+                try:
+                    elem = WebDriverWait(browser, 5, 0.5).until(
+                        EC.presence_of_element_located((By.XPATH, FIOUL_MARKET_PRIX)))
+                except Exception as e:
+                    logger.error(e)
+                    logger.error("site: %s \n error: can't load prix element \n code postal:%s ", website[1], cp)
+                    except_signal = True
+                if (except_signal):
+                    continue
                 prix = elem.text
                 if prix == '':
                     sleep(2)
                     prix = elem.text
                     if prix == '':
-                        logger.error("site: %s \n the price element don't contain the price \n code postal:%s ",
-                                     website[1], cp)
-                        browser.back()
-                        continue
-            prix = extractPriceForSite(prix)
-            if commune_signal:
-                prix = str(int(prix) + 30)
-            else:
-                prix = str(int(prix))
-            bon_cps.append(codepostal)
-            cps_prix_reel.append(prix)
-            cps_prix_original.append(prix)
-            cps_type.append(fioul_type)
-            cps_date.append(time.strftime("%Y-%m-%d", time.localtime()))
-            commentaire.append('')
-            logger.info("site: %s\n code postal:%s\n prix:%s ",
-                        website[1], cp, prix)
-            browser.back()
-        browser.quit()
-        logger.info("site: %s \n info:one end of the cycle \n", website[1])
+                        sleep(2)
+                        prix = elem.text
+                        if prix == '':
+                            logger.error("site: %s \n the price element don't contain the price \n code postal:%s ",
+                                         website[1], cp)
+                            browser.back()
+                            continue
+                prix = extractPriceForSite(prix)
+                if commune_signal:
+                    prix = str(int(prix) + 30)
+                else:
+                    prix = str(int(prix))
+                bon_cps.append(codepostal)
+                cps_prix_reel.append(prix)
+                cps_prix_original.append(prix)
+                cps_type.append(fioul_type)
+                cps_date.append(time.strftime("%Y-%m-%d", time.localtime()))
+                commentaire.append('')
+                logger.info("site: %s\n code postal:%s\n prix:%s ",
+                            website[1], cp, prix)
+                browser.back()
+            browser.quit()
+            logger.info("site: %s \n info:one end of the cycle \n", website[1])
+        except Exception as e:
+            logger.error(e)
+            logger.error("There is a problem during the process for market")
         if len(bon_cps) != 0:
             succeed_length = succeed_length + len(bon_cps)
             codepostals = list(set(codepostals) - set(bon_cps))
@@ -1994,8 +2004,26 @@ if __name__=='__main__':
         logger.warning('Program finished with time out, it going to set the etat as 2')
         etat_set(2)
     else:
-        logger.info("Program finish with success, it going to set the etat as 1")
-        etat_set(1)
+        try:
+            logger.info('begin to lance the thread')
+            thread_list = []
+            for site in sites:
+                t = threading.Thread(target=recuperation, args=(site, codepostals,), name='open_thread')
+                thread_list.append(t)
+            for t in thread_list:
+                t.start()
+            for t in thread_list:
+                t.join()
+            logger.info('lance the thread succeed')
+        except Exception as e:
+            logger.error(e)
+            logger.error("lance the thread failed or the theread stop when lancing")
+        if time_out():
+            logger.warning('Program finished with time out, it going to set the etat as 2')
+            etat_set(2)
+        else:
+            logger.info("Program finish with success, it going to set the etat as 1")
+            etat_set(1)
 
     if(get_etat() == 1):
         logger.info("it going to send a succeed signal")
